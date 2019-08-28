@@ -1,0 +1,270 @@
+$block_width: percentage(8/10);
+$iconH: 80px;
+$iconW: 80px; //skills icons
+$projIconSize: 300px; //project icons
+$blockHead_h: 100px;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.block {
+    width: $block_width;
+    margin: auto;
+}
+
+
+.blockHead {
+    width: 100%;
+    height: $blockHead_h;
+    background-color: #800020;
+    display: flex;
+    align-items: center;
+    h2 {
+        padding: 5px;
+        color: white;
+        margin-left: 50px;
+        margin-top: 0px;
+        font-weight: lighter;
+        font-size: 2.5em;
+    }
+}
+
+
+#nav1 {
+    @media only screen and (max-width: 575px) {
+               background-color: rgba(black, 0.5);
+            }    
+        
+        div {
+            
+            span { 
+                background: white; 
+                
+            }
+        }
+    
+    #navbarNav {
+        ul {
+            li {
+                text-shadow: 1px 1px 2px #000000;
+                margin: 10px;
+
+                @media only screen and (max-width: 575px) {
+                    :hover {
+                        background-color: rgba(black, 0.5);
+                    }
+                } 
+            }
+        }
+    }
+}
+
+.main {
+    background-image: url('../images/sbphoto.JPG');
+    width: 100%;
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire div */
+    background-attachment: fixed;
+
+    .title {
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+        color: white;
+
+        :first-child {
+            font-weight: bolder;
+            font-size: 3em;
+        }
+
+        @media only screen and (max-width: 600px) {
+           // text-shadow: 1px 1px 2px #000000;
+            font-size: .8em;
+            left: 50px;
+        }    
+    }
+}
+
+.projContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .projBlock {
+        max-width: $projIconSize;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+
+        .projDesc {
+            text-align: center;
+            padding: 5px;
+            span {
+                font-family: 'Permanent Marker', cursive;
+                font-size: 1.5em;
+            }
+            h4 {
+                margin-top: 15px;
+            }
+            ul {
+                text-align: left;
+            }
+        }
+
+        .projPic {
+            overflow: hidden; 
+            border-width: 7.5px;
+            border-style: ridge;
+            border-color: #2eb9ce;
+            &:hover {
+                & img {
+                    transform: scale(1.1);
+                    opacity: 0.9;
+                    transition: transform 2s ease-in-out;
+                }
+            }
+            img {
+                max-width: $projIconSize;
+                max-height: $projIconSize;
+                object-fit: contain;
+                
+            }
+        }
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+
+    .skillContainer {
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 20px;
+        margin: 10px;
+
+        .iconsContainer {
+            display: flex;
+            justify-content: space-evenly;
+            
+            .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+               
+                img {
+                    width: $iconW;
+                    height: $iconH;
+                    object-fit: contain;
+                    @media only screen and (max-width: 700px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edu {
+   
+    .york {
+        display: flex;
+        justify-content: space-evenly;
+     
+        img {
+            width: 200px;
+        }
+
+        .courses {
+            p { 
+                margin: 0;
+            }
+        }
+    }
+}
+
+.contactContainer {
+    max-width: 400px;
+    min-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5px;
+    align-items: center;
+    
+    div {
+        text-align: center;
+
+        a {
+            color: black;
+            float: left;
+        }
+    }
+
+}
+
+
+/* Turn off parallax scrolling for all tablets and phones.  */
+@media only screen and (max-device-width: 1366px) {
+  .main {
+    background-attachment: scroll;
+  }
+}
+
+
+.dropShadow {
+	-webkit-animation: text-shadow-drop-center 0.6s both;
+	        animation: text-shadow-drop-center 0.6s both;
+}
+
+@-webkit-keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.slide-in {
+	-webkit-animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>S Banwait Site</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/burgerstyle.css"
+    
+</head>
+
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm fixed-top navbar-light" id='nav1'>
+    <span>SB</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div id="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#aboutHead">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+                <a class="nav-link" href="#projHead"> Projects </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#skillsHead"> Skills </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#eduHead"> Education </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#contactHead"> Contact </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main">
+
+        <div class="title slide-in">
+            <h1 class="dropShadow"> SUKHDEV BANWAIT</h1>
+            <h1 class="dropShadow"> Software Developer</h1>
+        </div>
+    </div>
+
+    <div class="blockHead">
+        <h2 id="aboutHead">About</h2>
+    </div>
+    
+    <br>
+    <div class="about block">
+        <p>Currently caught in a loop...</p>
+		<pre>
+		<code id='code'>
+			let findingJob = true;
+			let resume = {};
+			resume.skills = [];
+			while ( findingJob ) {
+				resume.skills.push(New_Skill());
+				response = Jobs.apply(resume);
+				if (response) {
+					findingJob = false;
+				} 
+			}
+		
+		</code></pre>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="blockHead">
+        <h2 id="projHead">Projects</h2>
+    </div>
+    <br>
+    <br>
+    <div class="projContainer block">
+        <div class="weather projBlock">
+            <div class="projPic">
+                <a href="https://zealous-goldwasser-8ed087.netlify.com">
+                <img src="./images/weather.png" alt="app photo">
+                </a>
+            </div>
+            <div class="projDesc">
+                <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                <h4>
+                    The Weather App
+                </h4>
+                <ul>
+                    <li>Front end built using React</li>
+                    <li>Serverless Lambda functions on Netlify</li>
+                    <li>Utilized OpenWeather API</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ttt projBlock">
+            <div class="projPic">
+                <a href="https://algojedi.github.io/tictactoe">
+                <img src="./images/ttt.png" alt="app photo">
+                </a>
+            </div>
+            <div class="projDesc">
+                <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                <h4>
+                    Tic Tac Toe
+                </h4>
+                <ul>
+                    <li>My first React project</li>
+                    <li>GitHub pages server</li>
+                    <li>Fast and responsive</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------start of skills section-------------- -->
+    <br>
+    <br>
+    <br>
+
+    <div class="blockHead">
+        <h2 id="skillsHead">Skills</h2>
+    </div>
+    
+    <br>
+    <div class="skills block">
+        <div class="skillContainer">
+            <h3>Client Side</h3>
+            <hr>
+            <div class="iconsContainer">
+                <div class="icon">
+                    <img src="./images/html5.png" alt="html5">
+                    <p>HTML5</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/css3.png" alt="css">
+                    <p>CSS</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/sass.png" alt="sass">
+                    <p>SASS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skillContainer">
+            <h3>Server Side</h3>
+            <hr>
+            <div class="iconsContainer">
+                <div class="icon">
+                    <img src="./images/nodejs.png" alt="node">
+                    <p>NodeJS</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/postgresql.png" alt="postgresql">
+                    <p>PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skillContainer">
+            <h3>Frameworks & Libraries</h3>
+            <hr>
+            <div class="iconsContainer">
+                <div class="icon">
+                    <img src="./images/react.png" alt="react">
+                    <p>React</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/Angular.png" alt="ang photo">
+                    <p>Angular</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/redux.png" alt="redux">
+                    <p>Redux</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/boots.png" alt="bstrap">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/jquery.png" alt="jquery">
+                    <p>jQuery</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="skillContainer">
+            <h3>Programming Languages</h3>
+            <hr>
+            <div class="iconsContainer">
+                <div class="icon">
+                    <img src="./images/Javascript.png" alt="js">
+                    <p>JavaScript</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/Python.png" alt="py">
+                    <p>Python</p>
+                </div>
+                <div class="icon">
+                    <img src="./images/java.png" alt="java">
+                    <p>Java</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skillContainer">
+            <h3>Other</h3>
+            <hr>
+            <div class="iconsContainer">
+                <div class="icon">
+                    <img src="./images/photoshop.png" alt="ps">
+                    <p>Photoshop</p>
+                </div>
+                                
+            </div>
+        </div>
+
+    </div>
+
+
+
+        <!-- ----------end of skills/projects section-------------- -->
+    <br>
+    <br>
+    <br>
+
+    <div class="blockHead">
+        <h2 id="eduHead">Education</h2>
+    </div>
+    
+    <br>
+    <div class="edu block">
+        <div class="york">
+            <div class="school">
+                <img src="./images/york.png" alt="yorkU">
+                <p class="degree"><strong>B.A. Honors, Computer Science</strong></p>
+            </div>
+
+            <div class="courses">
+                <p><i>Relevant Courses</i></p>
+                <hr>
+                <p>Advanced Data Structures</p>
+                <p>O/S Fundamentals</p>
+                <p>Software Design</p>
+                <p>Intro to Database Systems</p>
+                <p>Design & Analysis of Algorithms</p>
+                <p>Discrete Math</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="blockHead">
+        <h2 id="contactHead">Contact</h2>
+    </div>
+    
+    <br>
+    <div class="block">
+        <div class="contactContainer">
+            <div>
+                <i style="font-size:24px" class="fa">&#xf0e0;</i>
+            </div>
+            <div>
+                <a href="mailto: ssbanwait78@gmail.com">ssbanwait78@gmail.com</a>
+            </div>
+                
+            <div>
+                <img src="./images/GitHub.png" alt="github" style="width: 30px;">
+            </div>
+            <div>
+                <a href="https://github.com/algojedi">https://github.com/algojedi</a>
+              
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+
+    <br />
+    <br />
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
