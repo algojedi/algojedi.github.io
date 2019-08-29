@@ -160,7 +160,7 @@ html {
                     width: $iconW;
                     height: $iconH;
                     object-fit: contain;
-                    @media only screen and (max-width: 700px) {
+                    @media screen and (max-width: 700px) {
                         width: 40px;
                         height: 40px;
                     }
@@ -171,19 +171,46 @@ html {
 }
 
 .edu {
-   
-    .york {
+    flex-direction: column;
+    display: flex;
+    
+    
+    
+    .schoolBlock {
         display: flex;
-        justify-content: space-evenly;
-     
-        img {
-            width: 200px;
+        padding: 20px;
+        margin: 20px;
+
+        @media screen and (max-width : 900px) {
+            flex-direction: column;
+            align-items: center;
         }
 
+        .school {
+            width: 400px;
+            #york-logo {
+                width: 200px;
+                
+            }
+            #sheridan-logo {
+                width: 75px;
+            }
+            
+            #sheridanTitle {
+                margin-right: 50px;
+            }
+        }
         .courses {
+            width: 250px;
+
+            @media screen and (max-width : 900px) {
+                margin-top: 30px;
+            }
+
             p { 
                 margin: 0;
             }
+           
         }
     }
 }

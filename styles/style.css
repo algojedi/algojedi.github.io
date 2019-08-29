@@ -136,21 +136,49 @@ html {
   height: 80px;
   object-fit: contain;
 }
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .skills .skillContainer .iconsContainer .icon img {
     width: 40px;
     height: 40px;
   }
 }
 
-.edu .york {
+.edu {
+  flex-direction: column;
   display: flex;
-  justify-content: space-evenly;
 }
-.edu .york img {
+.edu .schoolBlock {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+}
+@media screen and (max-width: 900px) {
+  .edu .schoolBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.edu .schoolBlock .school {
+  width: 400px;
+}
+.edu .schoolBlock .school #york-logo {
   width: 200px;
 }
-.edu .york .courses p {
+.edu .schoolBlock .school #sheridan-logo {
+  width: 75px;
+}
+.edu .schoolBlock .school #sheridanTitle {
+  margin-right: 50px;
+}
+.edu .schoolBlock .courses {
+  width: 250px;
+}
+@media screen and (max-width: 900px) {
+  .edu .schoolBlock .courses {
+    margin-top: 30px;
+  }
+}
+.edu .schoolBlock .courses p {
   margin: 0;
 }
 
