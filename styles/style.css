@@ -28,6 +28,11 @@ html {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+#nav1 #cheesy-logo {
+  opacity: 0.15;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2em;
+}
 #nav1 div span {
   background: white;
 }
@@ -125,22 +130,18 @@ html {
 .skills .skillContainer .iconsContainer {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .skills .skillContainer .iconsContainer .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 200px;
 }
 .skills .skillContainer .iconsContainer .icon img {
   width: 80px;
   height: 80px;
   object-fit: contain;
-}
-@media screen and (max-width: 700px) {
-  .skills .skillContainer .iconsContainer .icon img {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .edu {

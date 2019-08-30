@@ -27,7 +27,7 @@
 
 
 <nav class="navbar navbar-expand-sm fixed-top navbar-light" id='nav1'>
-    <span>SB</span>
+    <span id="cheesy-logo">SB</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <div id="nav-hamburger">
@@ -77,20 +77,17 @@
     <br>
     <div class="about block">
         <p>Currently caught in a loop...</p>
-		<pre>
-		<code id='code'>
-			let findingJob = true;
-			let resume = {};
-			resume.skills = [];
-			while ( findingJob ) {
-				resume.skills.push(New_Skill());
-				response = Jobs.apply(resume);
-				if (response) {
-					findingJob = false;
-				} 
-			}
-		
-		</code></pre>
+		<div id="code">
+            <pre><code>
+    let findingDevJob = true;
+    myResume = new Resume();
+    while ( findingJob ) {
+        myResume.skills.push(New_Skill());
+        response = Jobs.apply(myResume);
+        response ? findingDevJob = false : null; 
+    }
+        	</code></pre>
+        </div>
     </div>
 
     <br>
@@ -265,7 +262,7 @@
             <div class="school">
                 <img id="sheridan-logo" src="./images/sheridanLogo.jpg" alt="sheridanLogo">
                 <p class="degree"><strong>Software Development & Network Engineering</strong></p>
-                <span id="sheridanTitle">Sheridan College</span> <i>Sept 2019 - present<i>
+                <span id="sheridanTitle">Sheridan College</span> <i>Sept 2019 - present</i>
             </div>
             <div class="courses">
                 <p><i>Relevant Courses</i></p>
