@@ -72,20 +72,24 @@ html {
 
     .title {
         position: absolute;
-        bottom: 100px;
-        left: 100px;
+        bottom: 50px;
+        left: 75px;
         color: white;
+       
+        h1,h2 {        
+            font-size: 2.5em;
+            text-shadow: 0.075em 0.08em 0.1em rgba(0, 0, 0, 1);
 
-        :first-child {
-            font-weight: bolder;
-            font-size: 3em;
         }
+        
+        @media only screen and (max-width: 500px) {
+            left: 25px;
+            bottom: 25px;
+            h1,h2 {
+                font-size: 1.75em;
 
-        @media only screen and (max-width: 600px) {
-           // text-shadow: 1px 1px 2px #000000;
-            font-size: .8em;
-            left: 50px;
-        }    
+            }
+        }
     }
 }
 
@@ -131,7 +135,10 @@ html {
                 max-width: $projIconSize;
                 max-height: $projIconSize;
                 object-fit: contain;
-                
+            }
+            #this {
+                max-width: $projIconSize;
+                max-height: $projIconSize;
             }
         }
     }
@@ -171,45 +178,13 @@ html {
     }
 }
 
-.edu {
-    flex-direction: column;
-    display: flex;
-    
-    .schoolBlock {
-        display: flex;
-        padding: 20px;
-        margin: 20px;
 
-        @media screen and (max-width : 900px) {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .school {
-            width: 400px;
-            #york-logo {
-                width: 200px;
-                
-            }
-            #sheridan-logo {
-                width: 75px;
-            }
-            
-            #sheridanTitle {
-                margin-right: 50px;
-            }
-        }
-        .courses {
-            width: 250px;
-
-            @media screen and (max-width : 900px) {
-                margin-top: 30px;
-            }
-
-            p { 
-                margin: 0;
-            }
-        }
+.school-logo {
+    height: 100px;
+}
+.courses {
+    p {
+        margin: 0px;
     }
 }
 

@@ -60,18 +60,21 @@ html {
 }
 .main .title {
   position: absolute;
-  bottom: 100px;
-  left: 100px;
+  bottom: 50px;
+  left: 75px;
   color: white;
 }
-.main .title :first-child {
-  font-weight: bolder;
-  font-size: 3em;
+.main .title h1, .main .title h2 {
+  font-size: 2.5em;
+  text-shadow: 0.075em 0.08em 0.1em black;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .main .title {
-    font-size: 0.8em;
-    left: 50px;
+    left: 25px;
+    bottom: 25px;
+  }
+  .main .title h1, .main .title h2 {
+    font-size: 1.75em;
   }
 }
 
@@ -116,6 +119,10 @@ html {
   max-height: 300px;
   object-fit: contain;
 }
+.projContainer .projBlock .projPic #this {
+  max-width: 300px;
+  max-height: 300px;
+}
 
 .skills {
   display: flex;
@@ -144,43 +151,12 @@ html {
   object-fit: contain;
 }
 
-.edu {
-  flex-direction: column;
-  display: flex;
+.school-logo {
+  height: 100px;
 }
-.edu .schoolBlock {
-  display: flex;
-  padding: 20px;
-  margin: 20px;
-}
-@media screen and (max-width: 900px) {
-  .edu .schoolBlock {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.edu .schoolBlock .school {
-  width: 400px;
-}
-.edu .schoolBlock .school #york-logo {
-  width: 200px;
-}
-.edu .schoolBlock .school #sheridan-logo {
-  width: 75px;
-}
-.edu .schoolBlock .school #sheridanTitle {
-  margin-right: 50px;
-}
-.edu .schoolBlock .courses {
-  width: 250px;
-}
-@media screen and (max-width: 900px) {
-  .edu .schoolBlock .courses {
-    margin-top: 30px;
-  }
-}
-.edu .schoolBlock .courses p {
-  margin: 0;
+
+.courses p {
+  margin: 0px;
 }
 
 .contactContainer {
