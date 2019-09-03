@@ -108,6 +108,8 @@ html {
   border-width: 7.5px;
   border-style: ridge;
   border-color: #2eb9ce;
+  max-width: 300px;
+  max-height: 300px;
 }
 .projContainer .projBlock .projPic:hover img {
   transform: scale(1.1);
@@ -118,10 +120,6 @@ html {
   max-width: 300px;
   max-height: 300px;
   object-fit: contain;
-}
-.projContainer .projBlock .projPic #this {
-  max-width: 300px;
-  max-height: 300px;
 }
 
 .skills {

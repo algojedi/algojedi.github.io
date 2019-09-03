@@ -103,10 +103,12 @@ html {
         display: flex;
         flex-direction: column;
         margin: 15px;
+        
 
         .projDesc {
             text-align: center;
             padding: 5px;
+            
             span {
                 font-family: 'Permanent Marker', cursive;
                 font-size: 1.5em;
@@ -124,6 +126,8 @@ html {
             border-width: 7.5px;
             border-style: ridge;
             border-color: #2eb9ce;
+            max-width: $projIconSize;
+            max-height: $projIconSize;
             &:hover {
                 & img {
                     transform: scale(1.1);
@@ -136,10 +140,7 @@ html {
                 max-height: $projIconSize;
                 object-fit: contain;
             }
-            #this {
-                max-width: $projIconSize;
-                max-height: $projIconSize;
-            }
+           
         }
     }
 }
