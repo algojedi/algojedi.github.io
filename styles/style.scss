@@ -104,7 +104,29 @@ html {
         flex-direction: column;
         margin: 15px;
         
-
+        .projPic {
+            overflow: hidden; 
+            max-width: $projIconSize;
+            max-height: $projIconSize;
+            border: none;
+            box-shadow: 2px 2px 8px grey;
+            &:hover {
+                & img {
+                    transform: scale(1.1);
+                    opacity: 0.9;
+                    transition: transform 2s ease-in-out;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            img {
+                width: $projIconSize;
+                height: $projIconSize;
+                object-fit: cover;
+                margin: 0;
+                padding: 0;
+            } 
+        }
         .projDesc {
             text-align: center;
             padding: 5px;
@@ -119,28 +141,6 @@ html {
             ul {
                 text-align: left;
             }
-        }
-
-        .projPic {
-            overflow: hidden; 
-            border-width: 7.5px;
-            border-style: ridge;
-            border-color: #2eb9ce;
-            max-width: $projIconSize;
-            max-height: $projIconSize;
-            &:hover {
-                & img {
-                    transform: scale(1.1);
-                    opacity: 0.9;
-                    transition: transform 2s ease-in-out;
-                }
-            }
-            img {
-                max-width: $projIconSize;
-                max-height: $projIconSize;
-                object-fit: contain;
-            }
-           
         }
     }
 }
