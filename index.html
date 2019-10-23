@@ -79,12 +79,14 @@
         <p>Currently caught in a loop...</p>
 		<div id="code">
             <pre><code>
-    let findingDevJob = true;
+    let devJobFound = false;
     myResume = new Resume();
-    while ( findingJob ) {
-        myResume.skills.push(New_Skill());
+    while ( devJobFound ) {
+		myResume.skills.push(New_Skill());
         response = Jobs.apply(myResume);
-        response ? findingDevJob = false : null; 
+        if (response) {
+			devJobFound = true;
+		}
     }
         	</code></pre>
         </div>
