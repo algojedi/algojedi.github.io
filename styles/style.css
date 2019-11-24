@@ -37,7 +37,7 @@ html {
   background: white;
 }
 #nav1 #navbarNav ul li {
-  text-shadow: 1px 1px 2px #000000;
+  text-shadow: 1px 1px 5px white, -1px -1px 5px white;
   margin: 10px;
 }
 @media only screen and (max-width: 575px) {
@@ -51,11 +51,8 @@ html {
   width: 100%;
   height: 100vh;
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-size: cover;
-  /* Resize the background image to cover the entire div */
   background-attachment: fixed;
 }
 .main .title {
@@ -84,15 +81,15 @@ html {
   flex-wrap: wrap;
 }
 .projContainer .projBlock {
-  max-width: 300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin: 15px;
 }
 .projContainer .projBlock .projPic {
   overflow: hidden;
-  max-width: 300px;
-  max-height: 300px;
+  height: 300px;
+  width: 100%;
   border: none;
   box-shadow: 2px 2px 8px grey;
 }
@@ -104,9 +101,8 @@ html {
   padding: 0;
 }
 .projContainer .projBlock .projPic img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  min-height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -144,12 +140,18 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 200px;
+  margin: 5px;
 }
 .skills .skillContainer .iconsContainer .icon img {
   width: 80px;
   height: 80px;
   object-fit: contain;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillContainer .iconsContainer .icon img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .school-logo {

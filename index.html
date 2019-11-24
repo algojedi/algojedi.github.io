@@ -81,7 +81,7 @@
             <pre><code>
     let devJobFound = false;
     myResume = new Resume();
-    while ( devJobFound ) {
+    while ( !devJobFound ) {
         myResume.skills.push(New_Skill());
         response = Jobs.apply(myResume);
         if (response) {
@@ -102,10 +102,10 @@
     <br>
     <br>
     <div class="projContainer block">
-        <div class="weather projBlock">
+        <div class="projBlock">
             <div class="projPic">
                 <a target='_blank' href="https://zealous-goldwasser-8ed087.netlify.com">
-                <img src="./images/weather.png" alt="app photo">
+                    <img src="./images/weather.jpg" alt="app photo">
                 </a>
             </div>
             <div class="projDesc">
@@ -121,28 +121,11 @@
             </div>
         </div>
 
-        <div class="ttt projBlock">
-            <div class="projPic">
-                <a target='_blank' href="https://algojedi.github.io/tictactoe">
-                <img src="./images/ttt.png" alt="app photo">
-                </a>
-            </div>
-            <div class="projDesc">
-                <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
-                <h4>
-                    Tic Tac Toe
-                </h4>
-                <ul>
-                    <li>My first React project</li>
-                    <li>GitHub pages server</li>
-                    <li>Fast and responsive</li>
-                </ul>
-            </div>
-        </div>
+        
         <div class="projBlock">
             <div class="projPic">
                 <a target='_blank' class="nav-link" href="#cheesy-logo">
-                    <img src="./images/this.jpg" alt="photo">
+                    <img src="./images/this.png" alt="photo">
                 </a>
             </div>
             <div class="projDesc">
@@ -151,7 +134,7 @@
                     Portfolio Site
                 </h4>
                 <ul>
-                    <li>Created with Bootstrap</li>
+                    <li>Bootstrap Navigation</li>
                     <li>Utilized GitHub for version control</li>
                     <li>SASS for styling</li>
                 </ul>
@@ -174,6 +157,24 @@
                     <li>Back: Express/Node/Postgres</li>
                     <li>Passwords encryptyed</li>
                     <li>Hosted on Heroku</li>
+                </ul>
+            </div>
+        </div>
+        <div class="ttt projBlock">
+            <div class="projPic">
+                <a target='_blank' href="https://algojedi.github.io/tictactoe">
+                    <img src="./images/ttt.png" alt="app photo">
+                </a>
+            </div>
+            <div class="projDesc">
+                <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                <h4>
+                    Tic Tac Toe
+                </h4>
+                <ul>
+                    <li>My first React project</li>
+                    <li>GitHub pages server</li>
+                    <li>Fast and responsive</li>
                 </ul>
             </div>
         </div>

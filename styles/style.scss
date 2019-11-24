@@ -1,9 +1,10 @@
 $block_width: percentage(8/10);
-$iconH: 80px;
-$iconW: 80px; //skills icons
+$large-icon: 80px; //skills icons
+$small-icon: 50px;
 $projIconSize: 300px; //project icons
+$project-icon-shadow: grey;
 $blockHead_h: 100px;
-
+$heading-bg: #800020;
 
 html {
   scroll-behavior: smooth;
@@ -18,7 +19,7 @@ html {
 .blockHead {
     width: 100%;
     height: $blockHead_h;
-    background-color: #800020;
+    background-color: $heading-bg;
     display: flex;
     align-items: center;
     h2 {
@@ -46,9 +47,9 @@ html {
         }
     }
     #navbarNav {
-        ul {
+        ul { 
             li {
-                text-shadow: 1px 1px 2px #000000;
+                text-shadow: 1px 1px 5px white, -1px -1px 5px white;
                 margin: 10px;
 
                 @media only screen and (max-width: 575px) {
@@ -65,9 +66,9 @@ html {
     background-image: url('../images/sbphoto.jpg');
     width: 100%;
     height: 100vh;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire div */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
     background-attachment: fixed;
 
     .title {
@@ -99,17 +100,17 @@ html {
     flex-wrap: wrap;
 
     .projBlock {
-        max-width: $projIconSize;
+        width: $projIconSize;
         display: flex;
         flex-direction: column;
         margin: 15px;
         
         .projPic {
             overflow: hidden; 
-            max-width: $projIconSize;
-            max-height: $projIconSize;
+            height: $projIconSize;
+            width: 100%;
             border: none;
-            box-shadow: 2px 2px 8px grey;
+            box-shadow: 2px 2px 8px $project-icon-shadow;
             &:hover {
                 & img {
                     transform: scale(1.1);
@@ -120,9 +121,8 @@ html {
                 }
             }
             img {
-                width: $projIconSize;
-                height: $projIconSize;
-                object-fit: cover;
+                min-height: 100%;
+                width: 100%;
                 margin: 0;
                 padding: 0;
             } 
@@ -164,21 +164,21 @@ html {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                min-width: 200px;
+                margin: 5px;
                 img {
-                    width: $iconW;
-                    height: $iconH;
+                    width: $large-icon;
+                    height: $large-icon;
                     object-fit: contain;
-                    // @media screen and (max-width: 700px) {
-                    //     width: 40px;
-                    //     height: 40px;
-                    // }
+
+                    @media screen and (max-width: 500px) {
+                        width: $small-icon;
+                        height: $small-icon;
+                    }
                 }
             }
         }
     }
 }
-
 
 .school-logo {
     height: 100px;
