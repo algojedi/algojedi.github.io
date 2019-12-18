@@ -10,13 +10,13 @@
 }
 .navbar .icon_label {
   position: absolute;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
-  right: 2.5rem;
+  right: 2.75rem;
   border: 1px solid white;
   background-image: radial-gradient(#800020, black);
-  width: 40px;
-  height: 40px;
+  width: 3.5rem;
+  height: 3.5rem;
   z-index: 1000;
 }
 @media screen and (max-width: 500px) {
@@ -27,7 +27,7 @@
 .navbar .icon_label_bar {
   display: inline-block;
   position: absolute;
-  width: 25px;
+  width: 2.3333333333rem;
   height: 2.5px;
   background-color: white;
   transition: all 0.3s ease-in-out;
@@ -35,15 +35,15 @@
 }
 .navbar .icon_label_bar--top {
   top: 25%;
-  left: 6px;
+  left: 0.55rem;
 }
 .navbar .icon_label_bar--mid {
   top: 50%;
-  left: 6px;
+  left: 0.55rem;
 }
 .navbar .icon_label_bar--bottom {
   top: 75%;
-  left: 6px;
+  left: 0.55rem;
 }
 .navbar .icon #icon_check {
   display: none;
@@ -53,11 +53,11 @@
 }
 .navbar .icon #icon_check:checked + label > .icon_label_bar--top {
   transform: rotate(405deg);
-  top: 20px;
+  top: 1.75rem;
 }
 .navbar .icon #icon_check:checked + label > .icon_label_bar--bottom {
   transform: rotate(-45deg);
-  top: 20px;
+  top: 1.75rem;
 }
 .navbar_list {
   display: flex;
@@ -86,8 +86,8 @@
 }
 .navbar_list .list_item.active {
   border: 0.1rem solid white;
-  margin: 0.25rem;
-  padding: 0.5rem;
+  margin: 0.2vh;
+  padding: 0.2vh;
   background-color: rgba(128, 0, 32, 0.8);
   transform: translateY(5rem);
   transition: background-color 0.25s ease;

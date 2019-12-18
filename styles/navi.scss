@@ -15,9 +15,9 @@
         //label acts as the nav button for toggling menu
         &_label { 
             position: absolute; 
-            top: 50%; 
+            top: 70%; 
             transform: translateY(-50%);
-            right: 2.5rem; 
+            right: 2.75rem; 
             border: 1px solid white; 
             background-image: radial-gradient($main-bg-color, black);
             width: $burger-icon-size;
@@ -31,15 +31,15 @@
             &_bar {
                 display: inline-block;
                 position: absolute;
-                width: 25px;
+                width: ($burger-icon-size/1.5);
                 height: 2.5px;
                 background-color: white;
                 transition: all .3s ease-in-out;
                 border-radius: 50%;
             }
-            &_bar--top { top: 25%; left: 6px;}
-            &_bar--mid { top: 50%; left: 6px;}
-            &_bar--bottom { top: 75%; left: 6px;}
+            &_bar--top { top: 25%; left: .55rem;}
+            &_bar--mid { top: 50%; left: .55rem;}
+            &_bar--bottom { top: 75%; left: .55rem;}
         }
         #icon_check { 
             display: none;
@@ -49,11 +49,11 @@
             }
             &:checked + label > .icon_label_bar--top {
                 transform: rotate(405deg) ;
-                top: 20px;
+                top: ($burger-icon-size/2);
             }
             &:checked + label > .icon_label_bar--bottom {
                 transform: rotate(-45deg);
-                top: 20px;
+                top: ($burger-icon-size/2);
             }
         }
     }
@@ -85,8 +85,8 @@
             //active class displays expanded menu on smaller devices
             &.active {
                 border: .1rem solid white;
-                margin: .25rem;
-                padding: .5rem;
+                margin: .2vh;
+                padding: .2vh;
                 background-color: rgba($main-bg-color, .8);
                 transform: translateY(5rem);
                 transition: background-color 0.25s ease;
