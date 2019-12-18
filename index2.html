@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sukhdev Banwait</title>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="icon" id="icon" onclick="myFunction()">
+            <input type="checkbox" id="icon_check">
+            <label for="icon_check" class="icon_label">
+                <span id="icon_bar" class="icon_label_bar icon_label_bar--mid"></span>
+                <span id="icon_bar2" class="icon_label_bar icon_label_bar--top"></span>
+                <span id="icon_bar3" class="icon_label_bar icon_label_bar--bottom"></span>
+            </label>
+        </div>
+        <ul class="navbar_list" id="navbar_list">
+            
+            <li class="logo">
+                <a href="#main">SB</a>
+            </li>
+            <li class="list_item">
+                <a class="list_item_link" href="#about">About </a>
+            </li>
+            <li class="list_item">
+                <a class="list_item_link" href="#projects"> Projects </a>
+            </li>
+            <li class="list_item">
+                <a class="list_item_link" href="#skills"> Skills </a>
+            </li>
+            <li class="list_item">
+                <a class="list_item_link" href="#education"> Education </a>
+            </li>
+            <li class="list_item">
+                <a class="list_item_link" href="#contact"> Contact </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- --------- intro section --------- -->
+    <header class="main" id="main">
+        <div class="main_title slide-in">
+            <h1 class="main_title--name"> SUKHDEV BANWAIT</h1>
+            <h2 class="main_title--title"> Software Developer</h2>
+        </div>
+    </header>
+
+    <!-- ------- about section ---------- -->
+    <section class="section" id='about'>
+        <div class="section_banner">
+            <h2 class='section_banner_title'>About</h2>
+        </div>
+        
+        <div class="section_info">
+            <p>Currently caught in a loop...</p>
+            <div class="code">
+                <pre><code>
+            let devJobFound = false;
+            myResume = new Resume();
+            while ( !devJobFound ) {
+                myResume.skills.push(New_Skill());
+                response = Jobs.apply(myResume);
+                if (response) {
+                    devJobFound = true;
+                }
+            }
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------  Projects Section ---------- -->
+
+    <section class="section" id='projects'>
+        <div class="section_banner">
+            <h2 class='section_banner_title'>Projects</h2>
+        </div>
+    
+        <section class="projects_container block">
+            
+            <div class="projects_container_project">
+                <div class="projects_container_project_pic">
+                    <a target='_blank' href="https://zealous-goldwasser-8ed087.netlify.com">
+                        <img src="./images/weather.jpg" alt="app photo">
+                    </a>
+                </div>
+                <div class="projects_container_project_description">
+                    <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                    <h4>
+                        The Weather App
+                    </h4>
+                    <ul>
+                        <li>Front end built using React</li>
+                        <li>Serverless Lambda functions on Netlify</li>
+                        <li>Utilized OpenWeather API</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects_container_project">
+                <div class="projects_container_project_pic">
+                    <a target='_blank' class="nav-link" href="#cheesy-logo">
+                        <img src="./images/this.png" alt="photo">
+                    </a>
+                </div>
+                <div class="projects_container_project_description">
+                    <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                    <h4>
+                        Portfolio Site
+                    </h4>
+                    <ul>
+                        <li>Bootstrap Navigation</li>
+                        <li>Utilized GitHub for version control</li>
+                        <li>SASS for styling</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects_container_project">
+                <div class="projects_container_project_pic">
+                    <a target='_blank' class="nav-link" href="https://todo-redux-postgres.herokuapp.com/">
+                        <img src="./images/todo.jpg" alt="photo">
+                    </a>
+                </div>
+                <div class="projects_container_project_description">
+                    <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                    <h4>
+                        Full Stack Todo App
+                    </h4>
+                    <ul>
+                        <li>My first full stack project</li>
+                        <li>Front: React/Redux/React Router</li>
+                        <li>Back: Express/Node/Postgres</li>
+                        <li>Passwords encryptyed</li>
+                        <li>Hosted on Heroku</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects_container_project">
+                <div class="projects_container_project_pic">
+                    <a target='_blank' href="https://algojedi.github.io/tictactoe">
+                        <img src="./images/ttt.png" alt="app photo">
+                    </a>
+                </div>
+                <div class="projects_container_project_description">
+                    <span>Click to see live demo!</span> <i style='font-size:24px;color:red' class='fas'>&#xf3bf;</i>
+                    <h4>
+                        Tic Tac Toe
+                    </h4>
+                    <ul>
+                        <li>My first React project</li>
+                        <li>GitHub pages server</li>
+                        <li>Fast and responsive</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </section>
+        
+    
+    
+    <!-- ----------start of skills section-------------- -->
+
+    <section class="section" id='skills'>
+        <div class="section_banner">
+            <h2 class='section_banner_title'>Skills</h2>
+        </div>
+
+        <div class="skills">
+            <div class="skills_container">
+                <h3>Client Side</h3>
+                <hr>
+                <div class="skills_container_icons">
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/html5.png" alt="html5">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/css3.png" alt="css">
+                        <p>CSS</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/sass.png" alt="sass">
+                        <p>SASS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills_container">
+                <h3>Server Side</h3>
+                <hr>
+                <div class="skills_container_icons">
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/nodejs.png" alt="node">
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/postgresql.png" alt="postgresql">
+                        <p>PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills_container">
+                <h3>Frameworks & Libraries</h3>
+                <hr>
+                <div class="skills_container_icons">
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/react.png" alt="react">
+                        <p>React</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/Angular.png" alt="ang photo">
+                        <p>Angular</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/redux.png" alt="redux">
+                        <p>Redux</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/boots.png" alt="bstrap">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/jquery.png" alt="jquery">
+                        <p>jQuery</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="skills_container">
+                <h3>Programming Languages</h3>
+                <hr>
+                <div class="skills_container_icons">
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/Javascript.png" alt="js">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/Python.png" alt="py">
+                        <p>Python</p>
+                    </div>
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/java.png" alt="java">
+                        <p>Java</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills_container">
+                <h3>Other</h3>
+                <hr>
+                <div class="skills_container_icons">
+                    <div class="skills_container_icons_icon">
+                        <img src="./images/photoshop.png" alt="ps">
+                        <p>Photoshop</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ----------end of skills/projects section-------------- -->
+    
+    
+    <section class="section" id='education'>
+        <div class="section_banner">
+            <h2 class='section_banner_title'>Education</h2>
+        </div>
+    
+        
+        <section class="edu">
+            <div class="edu_school">
+                <div class="edu_school_header">
+                    
+                    <img class="edu_school_header--school-logo" src="./images/sheridanLogo.jpg" alt="sheridanLogo">
+                    <p class="edu_school_header--pgm-name">Software Development & Network Engineering</p>
+                    <span class="edu_school_header--school-name">Sheridan College (<i>Sept 2019 - present</i>)</span>
+                </div>
+                <ul class="edu_school_courses">
+                    <li>Relevant Courses</li>
+                    <li>Data Communications</li>
+                    <li>Web Development<li/>
+                </ul>
+            </div>
+            
+            <div class="edu_school">
+                <div class="edu_school_header">
+                        <img class="edu_school_header--school-logo" src="./images/york.png" alt="yorkU">
+                        <p class="edu_school_header--pgm-name">B.A. Honors, Computer Science</p>
+                </div>
+        
+                <ul class="edu_school_courses">
+                        <li>Relevant Courses</li>
+                        <li>Advanced Data Structures</li>
+                        <li>O/S Fundamentals</li>
+                        <li>Software Design</li>
+                        <li>Intro to Database Systems</li>
+                        <li>Design & Analysis of Algorithms</li>
+                        <li>Discrete Math</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    
+        
+    <section class="section" id='contact'>
+        <div class="section_banner">
+            <h2 class='section_banner_title'>Contact</h2>
+        </div>
+    
+    
+        <section class="contact">
+            <div>
+                <i style="font-size: 3rem" class="fa">&#xf0e0;</i>
+            </div>
+            <div>
+                <a href="mailto: ssbanwait78@gmail.com">Email</a>
+            </div>
+            <div>
+                <img src="./images/GitHub.png" alt="github">
+            </div>
+            <div>
+                <a href="https://github.com/algojedi">GitHub</a>
+            </div>
+            <div>
+                <img src="./images/linkedin.png" alt="linkedin">
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/sukhdev-banwait-003300194">LinkedIn</a>
+            </div>
+            
+        </section>
+    </section>
+    
+    <br />
+    <br />
+
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

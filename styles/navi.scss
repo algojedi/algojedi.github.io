@@ -1,0 +1,155 @@
+@import 'variables';
+
+
+/* ----------- navigation ----------- */
+
+.navbar {
+    //outline: 1px solid blue;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 5000;
+
+    .icon { 
+        order: 1;
+
+        //label acts as the nav button for toggling menu
+        &_label { 
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%);
+            right: 2.5rem; 
+            border: 1px solid white; 
+            // border-radius: 50%;
+            background-image: radial-gradient($main-bg-color, black);
+            width: $burger-icon-size;
+            height: $burger-icon-size;
+            z-index: 1000;
+
+            @media screen and (max-width: 500px) {
+                right: 1.5rem;
+            }
+
+            &_bar {
+                display: inline-block;
+                position: absolute;
+                width: 25px;
+                height: 2.5px;
+                background-color: white;
+                transition: all .3s ease-in-out;
+                border-radius: 50%;
+            }
+            &_bar--top { top: 25%; left: 6px;}
+            &_bar--mid { top: 50%; left: 6px;}
+            &_bar--bottom { top: 75%; left: 6px;}
+        }
+        #icon_check { 
+            display: none;
+        
+            &:checked + label > .icon_label_bar--mid {
+                left: -2000px;
+            }
+            &:checked + label > .icon_label_bar--top {
+                transform: rotate(405deg) ;
+                top: 20px;
+            }
+            &:checked + label > .icon_label_bar--bottom {
+                transform: rotate(-45deg);
+                top: 20px;
+            }
+        }
+    }
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        
+        .logo {
+            font-family: 'Permanent Marker', cursive;
+            @media screen and (max-width: $burger-button-appears) {
+                display: none;                
+            }
+        }
+        
+        .list_item {
+            width: 100%;
+            text-align: center;
+            order: 2;
+            display: none;
+
+            &_link {
+                text-shadow: .2rem .2rem .3rem white, -0.2rem -0.2rem .3rem white;
+            }
+
+            //active class displays expanded menu on smaller devices
+            &.active {
+                border: .1rem solid white;
+                margin: .25rem;
+                padding: .5rem;
+                background-color: rgba($main-bg-color, .9);
+                transform: translateY(5rem);
+                transition: background-color 0.25s ease;
+                display: block;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                
+                & a { color: white;}
+                &:hover {
+                    background-color: rgba(white, .9);
+                    text-shadow: none;
+
+                    & a { color: black; }
+                }
+            }
+        }
+        li {
+            font-size: 1.6rem;
+            white-space: nowrap;
+            
+            a {
+                display: block;
+                padding: 15px 5px;
+                text-decoration: none;
+                color: black;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+
+                
+            }
+        }
+    }
+}
+
+
+
+/* Desktop menu */
+@media screen and (min-width: $burger-button-appears) {
+    .icon {
+        display: none;
+    }
+    .navbar_list {
+        & li {
+            padding: 15px 10px;
+        }
+        .list_item {
+            display: block;
+            width: auto;
+            order: 1;
+            font-size: $nav-link-size;
+            font-weight: bolder;
+            // a {
+            //     text-shadow: .2rem .2rem .3rem white, -0.2rem -0.2rem .3rem white;
+            // }
+        }
+        .logo {
+            order: 0;
+            opacity: .5;
+            font-style: italic;
+        }
+    }
+}
+

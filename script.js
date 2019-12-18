@@ -1,7 +1,15 @@
+// var menu = document.getElementById("navbar_list");
+var listItems = document.getElementsByClassName("list_item");
 
-$(document).ready(function(){
-    $('#nav-hamburger').click(function () {
-        $(this).toggleClass('open');
-    });
-});
+function myFunction() {
+
+    var checked = document.getElementById("icon_check").checked;
+    
+    // checked ? menu.className += ' overlay' : menu.className = 'navbar_list';
+    
+    for (var i = 0; i < listItems.length; i++) {
+        checked ?   listItems.item(i).className += " active" :
+                    listItems.item(i).className = "list_item";
+    }
+}
 

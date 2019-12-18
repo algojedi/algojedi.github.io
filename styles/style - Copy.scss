@@ -3,7 +3,7 @@ $large-icon: 80px; //skills icons
 $small-icon: 50px;
 $projIconSize: 300px; //project icons
 $project-icon-shadow: grey;
-$blockHead_h: 101px;
+$blockHead_h: 100px;
 $heading-bg: #800020;
 
 html {
@@ -35,85 +35,88 @@ html {
 /* ----------- navigation ----------- */
 
 .navbar {
-    background-color: rgb(199, 199, 139);
+    background-color: rgba(199, 199, 139, 0.3);
     padding: 10px;
-    outline: 3px solid black;
-}
-.icon_label { 
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%);
-    right: 20px; 
-    outline: 2px dotted blue; 
-    width: 40px;
-    height: 40px;
-}
-.icon { position: relative; outline: 2px solid pink;}
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.icon_label_bar {
-    display: inline-block;
-    position: absolute;
-    width: 25px;
-    height: 2.5px;
-    background-color: white;
-    transition: all .5s ease-in-out;
-}
-.icon_label_bar--top { top: 10px; left: 5px;}
-.icon_label_bar--mid { top: 20px; left: 5px;}
-.icon_label_bar--bottom { top: 30px; left: 5px;}
-
-
-#icon_check { display: none;}
-#icon_check:checked + label > .icon_label_bar--mid {
-    left: -2000px;
-}
-
-#icon_check:checked + label > .icon_label_bar--top {
-    transform: rotate(405deg) ;
-    top: 20px;
-}
-#icon_check:checked + label > .icon_label_bar--bottom {
-    transform: rotate(-45deg);
-    top: 20px;
-    
-}
-
-
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.list li {
-    font-size: 16px;
-    padding: 15px 5px;
-    white-space: nowrap;
-}
-
-.icon {
-    order: 1;
-}
-
-.list_item {
+    outline: 1px solid blue;
     width: 100%;
-    text-align: center;
-    order: 2;
-    display: none;
+    position: fixed;
+    
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        
+        & li {
+            font-size: 16px;
+            padding: 15px 5px;
+            white-space: nowrap;
+        }
+        .icon { //first list item
+            position: relative; 
+            order: 1;
+            outline: 2px dotted plum;
+            &_label {
+                position: absolute; 
+                top: 50%; 
+                transform: translateY(-50%);
+                right: 20px; 
+                outline: 2px dotted blue; 
+                width: 40px;
+                height: 40px;
+
+                &_bar {
+                    display: inline-block;
+                    position: absolute;
+                    width: 25px;
+                    height: 2.5px;
+                    background-color: white;
+                    transition: all .5s ease-in-out;
+                }
+                &_bar--top { top: 10px; left: 5px;}
+                &_bar--mid { top: 20px; left: 5px;}
+                &_bar--bottom { top: 30px; left: 5px;}
+            }
+
+            #icon_check {
+                display: none;
+
+                &:checked + label > .icon_label_bar--mid {
+                left: -2000px;
+                }
+
+                &:checked + label > .icon_label_bar--top {
+                    transform: rotate(405deg) ;
+                    top: 20px;
+                }
+                &:checked + label > .icon_label_bar--bottom {
+                    transform: rotate(-45deg);
+                    top: 20px;
+                }
+            }
+        }
+        // .logo {
+        // }
+        .list_item {
+            width: 100%;
+            text-align: center;
+            order: 2;
+            display: none;
+
+            &_link {
+                color: white;
+                text-decoration: none;
+            }
+
+            &.active {
+                display: block;
+                outline: 2px solid green;
+            }
+        }
+    }
 }
 
-
-.list_item.active {
-    display: block;
-    outline: 2px solid green;
-} 
 
 
 
@@ -137,14 +140,10 @@ a {
     .list li {
         padding: 15px 10px;
     }
-    
 }
 
 
 
-
-
-// ^^^^^^^^^^^^^^^^^^^@@@@@
 
 
 .main {
@@ -216,14 +215,14 @@ a {
             text-align: center;
             padding: 5px;
             
-            & span {
+            span {
                 font-family: 'Permanent Marker', cursive;
                 font-size: 1.5em;
             }
-            & h4 {
+            h4 {
                 margin-top: 15px;
             }
-            & ul {
+            ul {
                 text-align: left;
             }
         }

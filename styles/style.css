@@ -9,7 +9,7 @@ html {
 
 .blockHead {
   width: 100%;
-  height: 100px;
+  height: 101px;
   background-color: #800020;
   display: flex;
   align-items: center;
@@ -23,29 +23,128 @@ html {
   font-size: 2.5em;
 }
 
-@media only screen and (max-width: 575px) {
-  #nav1 {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-#nav1 #cheesy-logo {
-  opacity: 0.15;
-  font-family: "Permanent Marker", cursive;
-  font-size: 2em;
-}
-#nav1 div span {
-  background: white;
-}
-#nav1 #navbarNav ul li {
-  text-shadow: 1px 1px 5px white, -1px -1px 5px white;
-  margin: 10px;
-}
-@media only screen and (max-width: 575px) {
-  #nav1 #navbarNav ul li :hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+/* ----------- navigation ----------- */
+.navbar {
+  background-color: #c7c78b;
+  padding: 10px;
+  outline: 3px solid black;
 }
 
+.icon_label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  outline: 2px dotted blue;
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  position: relative;
+  outline: 2px solid pink;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon_label_bar {
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 2.5px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.icon_label_bar--top {
+  top: 10px;
+  left: 5px;
+}
+
+.icon_label_bar--mid {
+  top: 20px;
+  left: 5px;
+}
+
+.icon_label_bar--bottom {
+  top: 30px;
+  left: 5px;
+}
+
+#icon_check {
+  display: none;
+}
+
+#icon_check:checked + label > .icon_label_bar--mid {
+  left: -2000px;
+}
+
+#icon_check:checked + label > .icon_label_bar--top {
+  transform: rotate(405deg);
+  top: 20px;
+}
+
+#icon_check:checked + label > .icon_label_bar--bottom {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.list li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+
+.icon {
+  order: 1;
+}
+
+.list_item {
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
+
+.list_item.active {
+  display: block;
+  outline: 2px solid green;
+}
+
+/* Desktop menu */
+@media all and (min-width: 600px) {
+  .list_item {
+    display: block;
+    width: auto;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .list_item {
+    order: 1;
+  }
+
+  .list li {
+    padding: 15px 10px;
+  }
+}
 .main {
   background-image: url("../images/sbphoto.jpg");
   width: 100%;
