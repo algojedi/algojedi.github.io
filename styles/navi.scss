@@ -79,7 +79,7 @@
             display: none;
 
             &_link {
-                text-shadow: .2rem .2rem .3rem white, -0.2rem -0.2rem .3rem white;
+                text-shadow: .1rem .1rem .2rem white, -0.1rem -0.1rem .2rem white;
             }
 
             //active class displays expanded menu on smaller devices
@@ -87,7 +87,6 @@
                 border: .1rem solid white;
                 margin: .25rem;
                 padding: .5rem;
-                text-shadow: .1rem .1rem .2rem white, -0.1rem -0.1rem .2rem white;
                 background-color: rgba($main-bg-color, .8);
                 transform: translateY(5rem);
                 transition: background-color 0.25s ease;
@@ -95,7 +94,10 @@
                 backdrop-filter: blur(5px);
                 -webkit-backdrop-filter: blur(5px);
                 
-                & a { color: white;}
+                & a { 
+                    color: white; 
+                    text-shadow: none;
+                }
                 &:hover {
                     background-color: rgba(white, .8);
                     text-shadow: none;
@@ -123,8 +125,6 @@
     }
 }
 
-
-
 /* Desktop menu */
 @media screen and (min-width: $burger-button-appears) {
     .icon {
@@ -140,9 +140,7 @@
             order: 1;
             font-size: $nav-link-size;
             font-weight: bolder;
-            // a {
-            //     text-shadow: .2rem .2rem .3rem white, -0.2rem -0.2rem .3rem white;
-            // }
+            
         }
         .logo {
             order: 0;

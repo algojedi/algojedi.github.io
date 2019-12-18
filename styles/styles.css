@@ -82,13 +82,12 @@
   display: none;
 }
 .navbar_list .list_item_link {
-  text-shadow: 0.2rem 0.2rem 0.3rem white, -0.2rem -0.2rem 0.3rem white;
+  text-shadow: 0.1rem 0.1rem 0.2rem white, -0.1rem -0.1rem 0.2rem white;
 }
 .navbar_list .list_item.active {
   border: 0.1rem solid white;
   margin: 0.25rem;
   padding: 0.5rem;
-  text-shadow: 0.1rem 0.1rem 0.2rem white, -0.1rem -0.1rem 0.2rem white;
   background-color: rgba(128, 0, 32, 0.8);
   transform: translateY(5rem);
   transition: background-color 0.25s ease;
@@ -98,6 +97,7 @@
 }
 .navbar_list .list_item.active a {
   color: white;
+  text-shadow: none;
 }
 .navbar_list .list_item.active:hover {
   background-color: rgba(255, 255, 255, 0.8);
@@ -218,7 +218,6 @@ body {
   color: white;
 }
 .section_banner_title {
-  width: var(--content-width);
   margin: 0 auto;
 }
 .section_info {
