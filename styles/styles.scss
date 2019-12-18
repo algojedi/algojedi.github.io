@@ -50,9 +50,7 @@ body {
         margin-right: 4rem;
 
         // &--name, &--title {        
-
         // }
-
         
         @media only screen and (max-width: 750px) {
             font-size: 1.5rem;
@@ -64,8 +62,6 @@ body {
         }
     }
 }
-
-
 
 .section {
     font-size: $section-text-size;
@@ -88,7 +84,7 @@ body {
         width: var(--content-width);
         margin: $content-v-margin auto;
         .code {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
     }
 }
@@ -149,9 +145,6 @@ body {
         }
     }
 }
-
-
-
 
 
 //  ------ skills section -------
