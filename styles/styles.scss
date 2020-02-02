@@ -186,6 +186,7 @@ body {
                     width: $skill-icon-size--lrg;
                     height: $skill-icon-size--lrg;
                     object-fit: contain;
+                    margin-bottom: 1rem;
 
                     @media screen and (max-width: 500px) {
                         width: $skill-icon-size--sm;
