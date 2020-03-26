@@ -86,7 +86,8 @@
                 border: .1rem solid white;
                 margin: .2vh;
                 padding: .2vh;
-                background-color: rgba($main-bg-color, .8);
+                //background-color: rgba($main-bg-color, .8);
+                background-color: rgba(black, .5);
                 transform: translateY(5rem);
                 transition: background-color 0.25s ease;
                 display: block;

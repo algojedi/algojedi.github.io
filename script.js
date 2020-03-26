@@ -13,3 +13,14 @@ function myFunction() {
     }
 }
 
+function handleMenuClick() {
+    console.log("handled link click");
+}
+
+function closeLinks() {
+    document.getElementById("icon_check").checked = false;
+    
+    for (var i = 0; i < listItems.length; i++) {
+        listItems.item(i).className = "list_item";
+    }
+}
