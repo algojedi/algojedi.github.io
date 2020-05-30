@@ -1,16 +1,14 @@
-@import 'navi';
-@import 'variables';
-@import 'typography';
-
-
+@import "navi";
+@import "variables";
+@import "typography";
 
 :root {
-    --content-width: 85%;
+  --content-width: 85%;
 }
 @media (min-width: 800px) {
-    :root {
-        --content-width: 75%;
-    }
+  :root {
+    --content-width: 75%;
+  }
 }
 
 html {
@@ -18,270 +16,343 @@ html {
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 62.5%;
-    font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
 
 /* ------ main intro section ------ */
-
-
-.main {
-    background-image: url('../images/sbphoto.jpg');
-    width: 100%;
-    height: 100vh;
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    //background-attachment: fixed;
-    
-    &_title {
-        position: absolute;
-        bottom: 4rem;
-        left: 4rem;
-        color: white;
-        font-size: 2rem;
-        margin-right: 4rem;
-
-        // &--name, &--title {        
-        // }
-        
-        @media only screen and (max-width: 750px) {
-            font-size: 1.5rem;
-        }
-        @media only screen and (max-width: 500px) {
-            left: 2rem;
-            bottom: 2rem;
-            font-size: 1.25rem;
-        }
-    }
-}
-
-.section {
-    font-size: $section-text-size;
-    
-    &_banner {
-        width: 100%;
-        height: $section-banner-height;
-        background-color: $main-bg-color;
-        display: flex;
-        align-items: center;
-        color: white;
-        
-        &_title {
-            
-            margin: 0 auto;
-        }
-    }
-    &_info {
-        width: var(--content-width);
-        margin: $content-v-margin auto;
-        .code {
-            font-size: 1.2rem;
-
-            @media screen and (max-width: 600px) {
-                font-size: 1.1rem;
-            }
-        }
-    }
-}
-
-
-.projects_container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: var(--content-width);
-    margin: $content-v-margin auto;
-
-    &_project {
-        width: $project-icon-size;
-        display: flex;
-        flex-direction: column;
-        margin: 15px;
-        
-        &_pic {
-            overflow: hidden; 
-            height: $project-icon-size;
-            width: 100%;
-            border: none;
-            box-shadow: 2px 2px 8px $box-shadow-color;
-            &:hover {
-                & img {
-                    transform: scale(1.1);
-                    opacity: 0.9;
-                    transition: transform 2s ease-in-out;
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-            img {
-                min-height: 100%;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            } 
-        }
-        &_description {
-            text-align: center;
-            padding: 5px;
-            
-            span {
-                font-family: 'Permanent Marker', cursive;
-                font-size: 1rem;
-            }
-            h4 {
-                margin-top: 15px;
-                color: $main-bg-color--accent1;
-            }
-            ul {
-                text-align: left;
-                width: 75%;
-                margin: .5rem auto;
-            }
-        }
-    }
-}
-
-
-//  ------ skills section -------
-
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    width: var(--content-width);
-    margin: $content-v-margin auto;
-
-    &_container {
-        border: 1px solid black;
-        border-radius: 25px;
-        padding: 2rem;
-        margin: ($content-v-margin/3) 0;
-
-        h3 {
-            margin-bottom: ($content-v-margin/4);
-        }
-
-        &_icons {
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            margin: ($content-v-margin/3);
-            
-            &_icon {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 5px;
-                margin: ($content-v-margin/4);
-
-                img {
-                    width: $skill-icon-size--lrg;
-                    height: $skill-icon-size--lrg;
-                    object-fit: contain;
-                    margin-bottom: 1rem;
-
-                    @media screen and (max-width: 500px) {
-                        width: $skill-icon-size--sm;
-                        height: $skill-icon-size--sm;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.edu {
-    display: grid;
-    grid-template-columns: 1fr;
-    //grid-gap: 5px;
-
-    &_school {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        width: var(--content-width);
-        margin: $content-v-margin auto; 
-
-        &_header {
-            
-            &--school-logo {
-                height: $school-logo-height;
-            }
-            &--pgm-name {
-                font-weight: bolder;
-            }
-            &--school-name {
-            }
-        }
-        &_courses {
-            list-style: none;
-        
-            li {
-                &:first-child {
-                    font-style: italic;
-                    border-bottom: 2px solid lightgrey;
-                    margin: 8px 0;
-                    padding-bottom: 3px;
-                }            
-            }
-        }
-    }
-}
-
-.contact {
-    display: grid;
-    grid-template-columns: min-content 3fr;
-    grid-gap: 5px;
-    align-items: center;
-    width: var(--content-width);
-    margin: $content-v-margin auto;
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    img {
-        width: $contact-icon-width;
-    }
-    
-}
-
-
-// ------ title slide in animation ----------
-
-.slide-in {
-	-webkit-animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-    opacity: 0;
+main {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient($main-color, black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  @media screen and (max-width: 800px) {
+    padding: 0 2rem;
   }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
+
+  .main_title {
+    &--name {
+    }
+    &--welcome {
+    }
+    &--btn {
+      border: 1.5px solid whitesmoke;
+      padding: 0.5rem;
+      color: whitesmoke;
+      border-radius: 5%;
+      background: none;
+    }
   }
 }
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
-    opacity: 0;
+h1,
+button,
+h2 {
+  margin: 0.5rem;
+}
+h1 {
+  color: whitesmoke;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.5rem;
   }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
+  h1 {
+    font-size: 3rem;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.main_title--name-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+
+// .main {
+//     background-image: url('../images/sbphoto.jpg');
+//     width: 100%;
+//     height: 100vh;
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     //background-attachment: fixed;
+
+//     &_title {
+//         position: absolute;
+//         bottom: 4rem;
+//         left: 4rem;
+//         color: white;
+//         font-size: 2rem;
+//         margin-right: 4rem;
+
+//         // &--name, &--title {
+//         // }
+
+//         @media only screen and (max-width: 750px) {
+//             font-size: 1.5rem;
+//         }
+//         @media only screen and (max-width: 500px) {
+//             left: 2rem;
+//             bottom: 2rem;
+//             font-size: 1.25rem;
+//         }
+//     }
+// }
+
+// .section {
+//     font-size: $section-text-size;
+
+//     &_banner {
+//         width: 100%;
+//         height: $section-banner-height;
+//         background-color: $main-bg-color;
+//         display: flex;
+//         align-items: center;
+//         color: white;
+
+//         &_title {
+
+//             margin: 0 auto;
+//         }
+//     }
+//     &_info {
+//         width: var(--content-width);
+//         margin: $content-v-margin auto;
+//         .code {
+//             font-size: 1.2rem;
+
+//             @media screen and (max-width: 600px) {
+//                 font-size: 1.1rem;
+//             }
+//         }
+//     }
+// }
+
+// .projects_container {
+//     display: flex;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+//     width: var(--content-width);
+//     margin: $content-v-margin auto;
+
+//     &_project {
+//         width: $project-icon-size;
+//         display: flex;
+//         flex-direction: column;
+//         margin: 15px;
+
+//         &_pic {
+//             overflow: hidden;
+//             height: $project-icon-size;
+//             width: 100%;
+//             border: none;
+//             box-shadow: 2px 2px 8px $box-shadow-color;
+//             &:hover {
+//                 & img {
+//                     transform: scale(1.1);
+//                     opacity: 0.9;
+//                     transition: transform 2s ease-in-out;
+//                     margin: 0;
+//                     padding: 0;
+//                 }
+//             }
+//             img {
+//                 min-height: 100%;
+//                 width: 100%;
+//                 margin: 0;
+//                 padding: 0;
+//             }
+//         }
+//         &_description {
+//             text-align: center;
+//             padding: 5px;
+
+//             span {
+//                 font-family: 'Permanent Marker', cursive;
+//                 font-size: 1rem;
+//             }
+//             h4 {
+//                 margin-top: 15px;
+//                 color: $main-bg-color--accent1;
+//             }
+//             ul {
+//                 text-align: left;
+//                 width: 75%;
+//                 margin: .5rem auto;
+//             }
+//         }
+//     }
+// }
+
+// //  ------ skills section -------
+
+// .skills {
+//     display: flex;
+//     flex-direction: column;
+//     width: var(--content-width);
+//     margin: $content-v-margin auto;
+
+//     &_container {
+//         border: 1px solid black;
+//         border-radius: 25px;
+//         padding: 2rem;
+//         margin: ($content-v-margin/3) 0;
+
+//         h3 {
+//             margin-bottom: ($content-v-margin/4);
+//         }
+
+//         &_icons {
+//             display: flex;
+//             justify-content: space-evenly;
+//             flex-wrap: wrap;
+//             margin: ($content-v-margin/3);
+
+//             &_icon {
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 margin: 5px;
+//                 margin: ($content-v-margin/4);
+
+//                 img {
+//                     width: $skill-icon-size--lrg;
+//                     height: $skill-icon-size--lrg;
+//                     object-fit: contain;
+//                     margin-bottom: 1rem;
+
+//                     @media screen and (max-width: 500px) {
+//                         width: $skill-icon-size--sm;
+//                         height: $skill-icon-size--sm;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .edu {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     //grid-gap: 5px;
+
+//     &_school {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//         width: var(--content-width);
+//         margin: $content-v-margin auto;
+
+//         &_header {
+
+//             &--school-logo {
+//                 height: $school-logo-height;
+//             }
+//             &--pgm-name {
+//                 font-weight: bolder;
+//             }
+//             &--school-name {
+//             }
+//         }
+//         &_courses {
+//             list-style: none;
+
+//             li {
+//                 &:first-child {
+//                     font-style: italic;
+//                     border-bottom: 2px solid lightgrey;
+//                     margin: 8px 0;
+//                     padding-bottom: 3px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .contact {
+//     display: grid;
+//     grid-template-columns: min-content 3fr;
+//     grid-gap: 5px;
+//     align-items: center;
+//     width: var(--content-width);
+//     margin: $content-v-margin auto;
+
+//     a {
+//         text-decoration: none;
+//         color: black;
+//     }
+//     img {
+//         width: $contact-icon-width;
+//     }
+
+// }
+
+// // ------ title slide in animation ----------
+
+// .slide-in {
+// 	-webkit-animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// 	        animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// }
+
+// @-webkit-keyframes slide-in-left {
+//   0% {
+//     -webkit-transform: translateX(-1000px);
+//             transform: translateX(-1000px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: translateX(0);
+//             transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes slide-in-left {
+//   0% {
+//     -webkit-transform: translateX(-1000px);
+//             transform: translateX(-1000px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: translateX(0);
+//             transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
