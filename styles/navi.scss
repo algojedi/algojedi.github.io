@@ -15,9 +15,6 @@
 
   &_logo {
     @media screen and (max-width: $burger-button-appears) {
-      // display: none;
-      // flex-basis: 50%;
-
       position: absolute;
       left: 50%;
       z-index: 200;
@@ -25,7 +22,6 @@
   }
   &_logo > a {
     font-family: "Permanent Marker", cursive;
-    // padding: 0 !important;
     font-size: 1.2rem;
     text-decoration: none;
     color: inherit;
@@ -108,11 +104,6 @@
       }
 
       &_item {
-        //li elemen
-        // width: 100%;
-        // text-align: center;
-        // order: 2;
-        // display: none;
         padding: 1rem;
         border-top: 0.05rem solid rgba($apple-grey, 0.35);
         width: 90%;
@@ -187,7 +178,7 @@
       transform: translateY(0);
       position: static;
       background: none;
-      outline: 1px solid white;
+      // outline: 1px solid white;
       height: 100%;
       flex-basis: 70%;
 

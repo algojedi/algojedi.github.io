@@ -138,34 +138,75 @@ h2 {
 //     }
 // }
 
-// .section {
-//     font-size: $section-text-size;
+.section {
+  font-size: $section-text-size;
+  border: 2px solid orange;
+  margin-top: 2rem;
 
-//     &_banner {
-//         width: 100%;
-//         height: $section-banner-height;
-//         background-color: $main-bg-color;
-//         display: flex;
-//         align-items: center;
-//         color: white;
+  &_banner {
+    // @include banner-bg;
+    background-color: rgb(235, 233, 233);
+    width: 100%;
+    height: $section-banner-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // color: white;
 
-//         &_title {
+    &_title {
+      color: black;
+    }
+  }
+  &_profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & > * {
+      padding: 1rem;
+    }
+    &_pic {
+      // flex-basis: 30%;
+      border-radius: 50%;
+    }
+    &_about {
+      font-size: inherit;
+      line-height: 1.5rem;
+      flex-basis: 400px;
+    }
+  }
 
-//             margin: 0 auto;
-//         }
-//     }
-//     &_info {
-//         width: var(--content-width);
-//         margin: $content-v-margin auto;
-//         .code {
-//             font-size: 1.2rem;
+  // ------------- projects section ----------------
 
-//             @media screen and (max-width: 600px) {
-//                 font-size: 1.1rem;
-//             }
-//         }
-//     }
-// }
+  &_project {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_desc {
+      flex-basis: 600px;
+    }
+    &_preview {
+      flex-basis: 500px;
+      &_img {
+        width: 100%;
+      }
+      &_links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: $apple-black;
+        // @include bg-secondary;
+        & > * {
+          padding: 2rem;
+          color: $apple-grey;
+        }
+      }
+    }
+  }
+}
 
 // .projects_container {
 //     display: flex;

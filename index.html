@@ -65,23 +65,55 @@
         <h2 class="section_banner_title">About</h2>
       </div>
 
-      <div class="section_info">
-        <p>Currently caught in a loop...</p>
-        <div class="code">
-          <pre><code>
-let devJobFound = false;
-myResume = new Resume();
-while ( !devJobFound ) {
-    myResume.skills.push(New_Skill());
-    response = Jobs.apply(myResume);
-    if (response) {
-        devJobFound = true;
-    }
-}
-                </code></pre>
+      <div class="section_profile">
+        <img class="section_profile_pic" src="images/sbphoto.jpg" />
+        <div class="section_profile_about">
+          I'm a self-motivated full stack web developer with a strong technical
+          background who possesses self-discipline and the ability to work with
+          minimal supervision. Currently seeking a position in software
+          development that promotes continued learning and opportunity for
+          growth.
         </div>
       </div>
     </section>
+
+    <section class="section" id="projects">
+      <div class="section_banner">
+        <h2 class="section_banner_title">Projects</h2>
+      </div>
+
+      <section class="section_project">
+        <div class="section_project_desc">
+          <h4 class="section_project_desc_title">A Dictionary App</h4>
+          <p>
+            I wanted to make an application that toggles word definitions to
+            facilitate memorization through active recall. I used the Oxford API
+            to get the definitions.
+          </p>
+          <h6>Tech Used</h6>
+          <ul class="section_project_desc_techlist">
+            <li class="section_project_desc_techlist_icon"></li>
+            <li class="section_project_desc_techlist_icon"></li>
+            <li class="section_project_desc_techlist_icon"></li>
+            <li class="section_project_desc_techlist_icon"></li>
+            <li class="section_project_desc_techlist_icon"></li>
+          </ul>
+        </div>
+
+        <div class="section_project_preview">
+          <img
+            class="section_project_preview_img"
+            src="images/wordsie.jpg"
+            alt="site preview"
+          />
+          <div class="section_project_preview_links">
+            <i class="fab fa-github fa-2x"></i>
+            <i class="fas fa-link fa-2x"></i>
+          </div>
+        </div>
+      </section>
+    </section>
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/typewriter.js"></script>
