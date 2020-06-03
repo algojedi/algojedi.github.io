@@ -282,8 +282,11 @@ h2 {
 
 .section {
   font-size: 1rem;
-  border: 2px solid orange;
-  margin-top: 2rem;
+  color: #333333;
+}
+.section > section {
+  width: 90%;
+  margin: 1rem auto 2rem auto;
 }
 .section_banner {
   background-color: #ebe9e9;
@@ -294,50 +297,68 @@ h2 {
   justify-content: center;
 }
 .section_banner_title {
-  color: black;
+  color: inherit;
 }
-.section_profile {
+
+.about_profile {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.section_profile > * {
+.about_profile > * {
   padding: 1rem;
 }
-.section_profile_pic {
+.about_profile_pic {
+  flex: 0 1 200px;
   border-radius: 50%;
 }
-.section_profile_about {
+.about_profile_about {
   font-size: inherit;
   line-height: 1.5rem;
-  flex-basis: 400px;
+  flex: 3 1 400px;
 }
-.section_project {
+
+.projects_project {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
-.section_project_desc {
+.projects_project_desc {
   flex-basis: 600px;
+  line-height: 1.5rem;
 }
-.section_project_preview {
+.projects_project_desc_desc {
+  margin: 1rem 0;
+}
+.projects_project_desc_subtitle {
+  font-weight: bold;
+}
+.projects_project_desc_techlist {
+  list-style: circle;
+  margin: 0.5rem 1rem;
+}
+.projects_project_preview {
   flex-basis: 500px;
 }
-.section_project_preview_img {
+.projects_project_preview_img {
   width: 100%;
 }
-.section_project_preview_links {
+.projects_project_preview_links {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   background-color: #333333;
 }
-.section_project_preview_links > * {
+.projects_project_preview_links > * {
   padding: 2rem;
   color: #c1c1c1;
+  transition: color 0.25s ease-in;
+}
+.projects_project_preview_links > *:hover {
+  color: whitesmoke;
 }
 
 /*# sourceMappingURL=styles.css.map */

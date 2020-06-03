@@ -1,5 +1,5 @@
 @import "navi";
-@import "variables";
+// @import "variables";
 @import "typography";
 
 :root {
@@ -140,9 +140,16 @@ h2 {
 
 .section {
   font-size: $section-text-size;
-  border: 2px solid orange;
-  margin-top: 2rem;
-
+  // border: 2px solid orange;
+  // margin-top: 2rem;
+  // width: 90%;
+  // margin: 0 auto;
+  color: $apple-black;
+  & > section {
+    //does not apply to section banners
+    width: 90%;
+    margin: 1rem auto 2rem auto;
+  }
   &_banner {
     // @include banner-bg;
     background-color: rgb(235, 233, 233);
@@ -154,9 +161,11 @@ h2 {
     // color: white;
 
     &_title {
-      color: black;
+      color: inherit;
     }
   }
+}
+.about {
   &_profile {
     display: flex;
     align-items: center;
@@ -166,26 +175,53 @@ h2 {
       padding: 1rem;
     }
     &_pic {
-      // flex-basis: 30%;
+      flex: 0 1 200px;
+      // width: 200px;
       border-radius: 50%;
     }
     &_about {
       font-size: inherit;
-      line-height: 1.5rem;
-      flex-basis: 400px;
+      line-height: $standard-line-height;
+      flex: 3 1 400px;
     }
   }
-
-  // ------------- projects section ----------------
-
+}
+// ------------- projects section ----------------
+.projects {
   &_project {
+    // box-shadow: 1px 1px 1px grey;
+    //outline: 2px solid goldenrod;
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    //   0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    //   0 16px 16px rgba(0, 0, 0, 0.12);
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 
     &_desc {
       flex-basis: 600px;
+
+      line-height: $standard-line-height;
+
+      &_title {
+        // color: black;
+      }
+      &_desc {
+        // color: $apple-grey--dark;
+        margin: 1rem 0;
+      }
+      &_subtitle {
+        font-weight: bold;
+      }
+      &_techlist {
+        // color: $apple-grey--dark;
+        list-style: circle;
+        margin: 0.5rem 1rem;
+        &_tech {
+          //li element
+        }
+      }
     }
     &_preview {
       flex-basis: 500px;
@@ -202,6 +238,10 @@ h2 {
         & > * {
           padding: 2rem;
           color: $apple-grey;
+          transition: color 0.25s ease-in;
+          &:hover {
+            color: whitesmoke;
+          }
         }
       }
     }

@@ -1,0 +1,209 @@
+@import "variables";
+
+/* ----------- navigation ----------- */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 2.5rem;
+  z-index: 5000;
+  background-color: $apple-black;
+  color: $apple-grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_logo {
+    @media screen and (max-width: $burger-button-appears) {
+      position: absolute;
+      left: 50%;
+      z-index: 200;
+    }
+  }
+  &_logo > a {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // --------------  burger icon ---------------------
+  &_toggle {
+    padding: 0.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 1em;
+    top: 0.5em;
+    z-index: 1000;
+
+    &:focus {
+      outline: 1px solid lightgrey;
+      outline-offset: 0.3rem;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      background: $apple-grey;
+      width: 1.5em;
+      height: 1.5px;
+      border-radius: 1em;
+      transition: transform 250ms ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .hamburger::before {
+      top: 6px;
+    }
+    .hamburger::after {
+      bottom: 6px;
+    }
+  }
+
+  &_list--container {
+    position: fixed;
+    background: black; //$apple-black;
+    color: $apple-grey;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 100%;
+
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out; // 250ms cubic-bezier(1, 0, 0.75, 1);
+
+    & .navbar_list {
+      list-style: none;
+      display: flex;
+      // height: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      margin-top: 4rem;
+      padding: 0;
+      margin-left: 3rem;
+
+      @media screen and (min-width: $burger-button-appears) {
+        flex-direction: row;
+      }
+
+      &_item {
+        padding: 1rem;
+        border-top: 0.05rem solid rgba($apple-grey, 0.35);
+        width: 90%;
+
+        &_link {
+          text-decoration: none;
+          color: inherit;
+          font-size: 1rem;
+          //text-shadow: 0.1rem 0.1rem 0.2rem white, -0.1rem -0.1rem 0.2rem white;
+          opacity: 0;
+          transition: opacity 0.75s ease 0.2s;
+        }
+
+        //active class displays expanded menu on smaller devices
+        &.active {
+          & a {
+            color: $apple-grey;
+            text-shadow: none;
+          }
+          &:hover {
+            // background-color: rgba(white, 0.8);
+            text-shadow: none;
+
+            //   & a {
+            //     color: black;
+            //   }
+          }
+        }
+      }
+    }
+  }
+}
+// ------- toggle functionality ----------------------
+
+.nav_open .navbar_list--container {
+  transform: translateX(0);
+}
+
+.nav_open
+  .navbar_list--container
+  .navbar_list
+  .navbar_list_item
+  .navbar_list_item_link.active {
+  opacity: 1;
+}
+
+.nav_open .navbar_toggle {
+  position: fixed;
+}
+
+.nav_open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav_open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav_open .hamburger::after {
+  opacity: 0;
+}
+
+/* Desktop menu */
+@media screen and (min-width: $burger-button-appears) {
+  .navbar {
+    justify-content: space-around;
+
+    &_toggle {
+      display: none;
+    }
+    &_list--container {
+      transform: translateY(0);
+      position: static;
+      background: none;
+      // outline: 1px solid white;
+      height: 100%;
+      flex-basis: 70%;
+
+      .navbar_list {
+        flex-direction: row;
+        height: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+
+        &_item {
+          cursor: pointer;
+          border: none;
+          padding: 0;
+          display: block;
+          //     width: auto;
+          //     order: 1;
+          //     font-size: $nav-link-size;
+          &_link {
+            color: inherit;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ $main-bg-color--accent1: darkred;
 $main-color: rgb(100, 100, 100);
 $apple-black: rgb(51, 51, 51);
 $apple-grey: rgb(193, 193, 193);
+$apple-grey--dark: rgb(134, 134, 134);
 
 $burger-icon-size: 2.5rem;
 $burger-button-appears: 750px; //breakpoint for main navi change
@@ -37,3 +38,5 @@ $box-shadow-color: black;
     #182848
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+$standard-line-height: 1.5rem;
