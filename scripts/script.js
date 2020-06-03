@@ -15,3 +15,11 @@ navLinks.forEach((link) => {
     console.log("link clickd");
   });
 });
+
+// functionality for the cards in projects section
+
+const card = document.getElementById("card");
+
+function cardClicked() {
+  card.classList.toggle("flipped");
+}

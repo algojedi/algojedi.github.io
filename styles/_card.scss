@@ -1,0 +1,41 @@
+@import "variables";
+
+.card {
+  width: 400px;
+  perspective: 10rem; //higher value here leads to more realistic rotation
+
+  -moz-perspective: 10rem;
+  position: relative;
+  height: 10rem; //MUST have same height as _side so as to not collapse
+  &_side {
+    height: 10rem;
+    color: $apple-grey;
+    transition: all 0.5s ease;
+    position: absolute;
+    box-shadow: $box-shadow;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    &--front {
+      background-color: $apple-black;
+    }
+    &--back {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary,
+        $color-secondary--light
+      );
+      transform: rotateY(180deg);
+      color: white;
+    }
+  }
+}
+.flipped .card_side--front {
+  transform: rotateY(180deg);
+}
+
+.flipped .card_side--back {
+  transform: rotateY(0);
+}
