@@ -52,12 +52,11 @@
           and I
           <span
             class="main_title--name-type"
-            data-wait="1000"
-            data-words='["am a full stack web developer", "have a degree in computer science", "love building things"]'
+            data-wait="2000"
+            data-words='["am a full stack web developer.", "have a degree in computer science.", "love building things."]'
           ></span>
         </h1>
         <h2 class="main_title--welcome">Welcome to My Site</h2>
-        <button class="main_title--btn">Stop Animation</button>
       </div>
     </main>
 
@@ -83,33 +82,36 @@
       </div>
       <!-- -------- wordsie app ----------->
       <section class="projects_project">
-        <!-- <div class="projects_project_desc">
-          <h3 class="projects_project_desc_title">A Dictionary App</h3>
-          <p class="projects_project_desc_desc">
-            I wanted to make an application that toggles word definitions to
-            facilitate memorization through active recall. I utilized the Oxford
-            API to retrieve the word definitions. Although it was made into a
-            progressive web app, the functionality does depend on an internet
-            connection. Deployed on Digital Ocean using Nginx / Cloudflare.
-          </p>
-          <p class="projects_project_desc_subtitle">Tech Used</p>
-          <ul class="projects_project_desc_techlist">
-            <li class="projects_project_desc_techlist_tech">
-              React / Router / Context
-            </li>
-            <li class="projects_project_desc_techlist_tech">Material UI</li>
-            <li class="projects_project_desc_techlist_tech">Node / Express</li>
-            <li class="projects_project_desc_techlist_tech">
-              Mongoose / MongoDB / Redis
-            </li>
-            <li class="projects_project_desc_techlist_tech">
-              JWT Authentication
-            </li>
-          </ul>
-        </div> -->
-        <div class="card" onclick="cardClicked()" id="card">
-          <div class="card_side card_side--front">hello from side 1</div>
-          <div class="card_side card_side--back">hello from side 2</div>
+        <div class="card" onclick="cardClicked(this)" id="card">
+          <div class="card_side card_side--front">
+            <div class="card_side--front_picture"></div>
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--front_title">A Dictionary App</h3>
+            <p class="card_side--front_desc">
+              An progressive web application that toggles word definitions to
+              facilitate memorization through active recall. I utilized the
+              Oxford API to retrieve the word definitions. Deployed on Digital
+              Ocean using Nginx / Cloudflare for quick loading.
+            </p>
+          </div>
+          <div class="card_side card_side--back">
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--back_title">Technical Sheet</h3>
+            <hr class="styled-hr styled-hr--white" />
+            <ul class="card_side--back_techlist">
+              <li class="card_side--back_techlist_item">
+                React / Router / Context
+              </li>
+              <li class="card_side--back_techlist_item">Material UI</li>
+              <li class="card_side--back_techlist_item">Node / Express</li>
+              <li class="card_side--back_techlist_item">
+                Mongoose / MongoDB / Redis
+              </li>
+              <li class="card_side--back_techlist_item">
+                JWT Authentication
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="projects_project_preview">
@@ -118,74 +120,225 @@
             src="images/wordsie.png"
             alt="site preview"
           />
+          <div class="projects_project_preview_links">
+            <a
+              target="_blank"
+              href="https://github.com/algojedi/wordsie"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.thewordapp.xyz"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fas fa-link fa-2x"></i>
+            </a>
+          </div>
         </div>
       </section>
-      <hr />
+      <hr class="styled-hr styled-hr--black" />
+
       <!-- -------- math app ----------->
       <section class="projects_project">
-        <div class="projects_project_desc">
-          <h3 class="projects_project_desc_title">A Math App</h3>
-          <p class="projects_project_desc_desc">
-            I was not able to find something similiar online, so I created a
-            math speed testing application that times and records a user's
-            performance in answering a set of math questions. This was my first
-            first CRUD app. Lessons learned: importance of state management,
-            more attention to design.
-          </p>
-          <p class="projects_project_desc_subtitle">Tech Used</p>
-          <ul class="projects_project_desc_techlist">
-            <li class="projects_project_desc_techlist_tech">
-              React / Router
-            </li>
-            <li class="projects_project_desc_techlist_tech">
-              Auth and Database via Firebase
-            </li>
-            <li class="projects_project_desc_techlist_tech">
-              Deployed on Heroku
-            </li>
-          </ul>
+        <div class="card" onclick="cardClicked(this)" id="card">
+          <div class="card_side card_side--front">
+            <div class="card_side--front_picture"></div>
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--front_title">A Math App</h3>
+            <p class="card_side--front_desc">
+              I was not able to find something similiar online, so I created a
+              math speed testing application that times and records a user's
+              performance in answering a set of math questions. This was my
+              first first CRUD app. Lessons learned: importance of state
+              management, more attention to design.
+            </p>
+          </div>
+          <div class="card_side card_side--back">
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--back_title">Technical Sheet</h3>
+            <hr class="styled-hr styled-hr--white" />
+            <ul class="card_side--back_techlist">
+              <li class="card_side--back_techlist_item">
+                React / Router / Spring
+              </li>
+              <li class="card_side--back_techlist_item">
+                Database and Auth via Firebase
+              </li>
+              <li class="card_side--back_techlist_item">
+                Deployed on Heroku
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="projects_project_preview">
           <img
             class="projects_project_preview_img"
-            src="images/math-app.jpg"
+            src="images/math.png"
             alt="site preview"
           />
-
-          >
+          <div class="projects_project_preview_links">
+            <a
+              target="_blank"
+              href="https://github.com/algojedi/math-test"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://dry-reef-98279.herokuapp.com"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fas fa-link fa-2x"></i>
+            </a>
+          </div>
         </div>
       </section>
+      <hr class="styled-hr styled-hr--black" />
 
-      <hr />
       <!-- -------- weather app ----------->
       <section class="projects_project">
-        <div class="projects_project_desc">
-          <h3 class="projects_project_desc_title">A Weather App</h3>
-          <p class="projects_project_desc_desc">
-            A weather app that was one of my first fully responsive React
-            projects. Utilized the OpenWeather API.
-          </p>
-          <p class="projects_project_desc_subtitle">Tech Used</p>
-          <ul class="projects_project_desc_techlist">
-            <li class="projects_project_desc_techlist_tech">
-              React
-            </li>
-            <li class="projects_project_desc_techlist_tech">
-              Served via lambda functions on Netlify
-            </li>
-          </ul>
+        <div class="card" onclick="cardClicked(this)" id="card">
+          <div class="card_side card_side--front">
+            <div class="card_side--front_picture"></div>
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--front_title">A Weather App</h3>
+            <p class="card_side--front_desc">
+              A weather app that was one of my first fully responsive React
+              projects. Utilized the OpenWeather API to respond to inputted
+              requests for a city's forecast.
+            </p>
+          </div>
+          <div class="card_side card_side--back">
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--back_title">Technical Sheet</h3>
+            <hr class="styled-hr styled-hr--white" />
+            <ul class="card_side--back_techlist">
+              <li class="card_side--back_techlist_item">
+                React
+              </li>
+              <li class="card_side--back_techlist_item">
+                Served via lambda functions on Netlify
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="projects_project_preview">
           <img
             class="projects_project_preview_img"
-            src="images/weather-app.jpg"
+            src="images/weather.png"
             alt="site preview"
           />
+          <div class="projects_project_preview_links">
+            <a
+              target="_blank"
+              href="https://github.com/algojedi/netlify-react-weather"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://zealous-goldwasser-8ed087.netlify.app"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fas fa-link fa-2x"></i>
+            </a>
+          </div>
         </div>
       </section>
     </section>
+
+
+
+    <section class="section" id="education">
+      <div class="section_banner">
+        <h2 class="section_banner_title">Education</h2>
+      </div>
+      <section class="education">
+        <div class="education_school">
+          <div class="education_school_header">
+            <img
+              class="education_school_header--school-logo"
+              src="./images/sheridanLogo.jpg"
+              alt="sheridanLogo"
+            />
+            <p class="education_school_header--pgm-name">
+              Software Development & Network Engineering
+            </p>
+            <span class="education_school_header--school-name"
+              >Sheridan College (<i>Sept 2019 - present</i>)</span
+            >
+          </div>
+          <ul class="education_school_courses">
+            <li>Relevant Courses</li>
+            <li>Data Communications</li>
+            <li>Web Development</li>
+            <li />
+            <li>Object Oriented Programming</li>
+            <li>UI Design</li>
+          </ul>
+        </div>
+
+        <div class="education_school">
+          <div class="education_school_header">
+            <img
+              class="education_school_header--school-logo"
+              src="./images/york.png"
+              alt="yorkU"
+            />
+            <p class="education_school_header--pgm-name">
+              B.A. Honors, Computer Science
+            </p>
+          </div>
+
+          <ul class="education_school_courses">
+            <li>Relevant Courses</li>
+            <li>Advanced Data Structures</li>
+            <li>O/S Fundamentals</li>
+            <li>Software Design</li>
+            <li>Intro to Database Systems</li>
+            <li>Design & Analysis of Algorithms</li>
+            <li>Discrete Math</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    </section>
+
+<section class="contact" id="contact">
+ <section class="contact_wrapper">
+   <div class="contact_icon">
+     <a href="https://www.linkedin.com/in/sukhdev-banwait-003300194" class="contact_icon_link">
+      <i class="fa-4x fab fa-linkedin"></i>
+    </a>
+  </div>
+   <div class="contact_icon">
+     <a href="https://github.com/algojedi" class="contact_icon_link">
+      <i class="fab fa-github fa-4x"></i>
+    </a>
+  </div>
+   <div class="contact_icon">
+     <a href="mailto: ssbanwait78@gmail.com" class="contact_icon_link">
+       <i class="fas fa-envelope fa-4x">  </i>
+      </a>
+    </div> 
+ </section>
+<section class="contact_copyright"><i class="far fa-copyright"></i>&nbsp 2020 - Created by S. Banwait</section>
+</section>
+
+
+
+
+
+
+
+
+
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="scripts/script.js"></script>

@@ -1,14 +1,15 @@
 $color-blue: #5643fa;
 $color-blue--light: #2998ff;
+$color-orange: #df6925;
 
-$main-bg-color: #800020;
-$main-bg-color--accent1: darkred;
 $main-color: rgb(100, 100, 100);
+
 $apple-black: rgb(51, 51, 51);
 $apple-grey: rgb(193, 193, 193);
 $apple-grey--dark: rgb(134, 134, 134);
 $color-secondary: $color-blue;
 $color-secondary--light: $color-blue--light;
+$color-tertiary: $color-orange;
 
 $burger-icon-size: 2.5rem;
 $burger-button-appears: 750px; //breakpoint for main navi change
@@ -18,18 +19,13 @@ $section-banner-height: 5rem;
 $section-text-size: 1rem;
 $section-text-size--sm: 0.9rem;
 
-$project-icon-size: 300px;
-
-$skill-icon-size--lrg: 80px;
-$skill-icon-size--sm: 50px;
-
 $school-logo-height: 100px;
 $contact-icon-width: 3rem;
 
 $content-v-margin: 2rem;
 $title-v-margin: 1rem;
-$box-shadow-color: black;
 
-$box-shadow: 0 1.5rem 3rem rgba(black, 0.15);
+$box-shadow: 0 0.5rem 2rem 0.5rem rgba(black, 0.15);
+$box-shadow--light: 0 0.25rem 0.5rem rgba(black, 0.15);
 
 $standard-line-height: 1.5rem;

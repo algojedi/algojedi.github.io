@@ -18,8 +18,8 @@ navLinks.forEach((link) => {
 
 // functionality for the cards in projects section
 
-const card = document.getElementById("card");
+// const card = document.getElementById("card");
 
-function cardClicked() {
-  card.classList.toggle("flipped");
+function cardClicked(element) {
+  element.classList.toggle("flipped");
 }

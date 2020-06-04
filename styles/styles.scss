@@ -104,48 +104,33 @@ h2 {
     font-size: 1.2rem;
   }
 }
+// ---- global styles ----
+.styled-hr {
+  border: 0;
+  height: 1px;
+  width: 70%;
+  margin: 0 auto 2rem;
+  &--black {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: 905px) {
+      height: 0;
+      border: none;
+      margin-bottom: 3rem;
+    }
+  }
+  &--white {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
 
 .main_title--name-type > .txt {
   border-right: 0.2rem solid #777;
 }
 
-// .main {
-//     background-image: url('../images/sbphoto.jpg');
-//     width: 100%;
-//     height: 100vh;
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     //background-attachment: fixed;
-
-//     &_title {
-//         position: absolute;
-//         bottom: 4rem;
-//         left: 4rem;
-//         color: white;
-//         font-size: 2rem;
-//         margin-right: 4rem;
-
-//         // &--name, &--title {
-//         // }
-
-//         @media only screen and (max-width: 750px) {
-//             font-size: 1.5rem;
-//         }
-//         @media only screen and (max-width: 500px) {
-//             left: 2rem;
-//             bottom: 2rem;
-//             font-size: 1.25rem;
-//         }
-//     }
-// }
-
 .section {
   font-size: $section-text-size;
-  // border: 2px solid orange;
-  // margin-top: 2rem;
-  // width: 90%;
-  // margin: 0 auto;
   color: $apple-black;
   & > section {
     //does not apply to section banners
@@ -160,8 +145,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    // color: white;
-
+    margin-bottom: 2rem;
     &_title {
       color: inherit;
     }
@@ -191,235 +175,99 @@ h2 {
 // ------------- projects section ----------------
 .projects {
   &_project {
-    // box-shadow: 1px 1px 1px grey;
-    //outline: 2px solid goldenrod;
-    // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-    //   0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-    //   0 16px 16px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    line-height: $standard-line-height;
 
-    &_desc {
-      flex-basis: 600px;
-
-      line-height: $standard-line-height;
-
-      &_title {
-        // color: black;
-      }
-      &_desc {
-        // color: $apple-grey--dark;
-        margin: 1rem 0;
-      }
-      &_subtitle {
-        font-weight: bold;
-      }
-      &_techlist {
-        // color: $apple-grey--dark;
-        list-style: circle;
-        margin: 0.5rem 1rem;
-        &_tech {
-          //li element
-        }
-      }
+    @media screen and (max-width: 450px) {
+      margin: 0 !important;
+      width: 100% !important;
     }
+
     &_preview {
-      flex-basis: 500px;
+      flex-basis: 400px;
       &_img {
         width: 100%;
+      }
+      &_links {
+        display: flex;
+        justify-content: center;
+        a {
+          display: block;
+          padding: 1rem;
+          color: $apple-black;
+          transition: color 0.25s ease;
+          &:hover {
+            color: $apple-grey;
+          }
+        }
       }
     }
   }
 }
 
-// .projects_container {
-//     display: flex;
-//     justify-content: space-evenly;
-//     flex-wrap: wrap;
-//     width: var(--content-width);
-//     margin: $content-v-margin auto;
+.education {
+  display: grid;
+  grid-template-columns: 1fr;
 
-//     &_project {
-//         width: $project-icon-size;
-//         display: flex;
-//         flex-direction: column;
-//         margin: 15px;
+  &_school {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: var(--content-width);
+    margin: $content-v-margin auto;
 
-//         &_pic {
-//             overflow: hidden;
-//             height: $project-icon-size;
-//             width: 100%;
-//             border: none;
-//             box-shadow: 2px 2px 8px $box-shadow-color;
-//             &:hover {
-//                 & img {
-//                     transform: scale(1.1);
-//                     opacity: 0.9;
-//                     transition: transform 2s ease-in-out;
-//                     margin: 0;
-//                     padding: 0;
-//                 }
-//             }
-//             img {
-//                 min-height: 100%;
-//                 width: 100%;
-//                 margin: 0;
-//                 padding: 0;
-//             }
-//         }
-//         &_description {
-//             text-align: center;
-//             padding: 5px;
+    &_header {
+      &--school-logo {
+        height: $school-logo-height;
+      }
+      &--pgm-name {
+        font-weight: bolder;
+      }
+      &--school-name {
+      }
+    }
+    &_courses {
+      list-style: none;
 
-//             span {
-//                 font-family: 'Permanent Marker', cursive;
-//                 font-size: 1rem;
-//             }
-//             h4 {
-//                 margin-top: 15px;
-//                 color: $main-bg-color--accent1;
-//             }
-//             ul {
-//                 text-align: left;
-//                 width: 75%;
-//                 margin: .5rem auto;
-//             }
-//         }
-//     }
-// }
-
-// //  ------ skills section -------
-
-// .skills {
-//     display: flex;
-//     flex-direction: column;
-//     width: var(--content-width);
-//     margin: $content-v-margin auto;
-
-//     &_container {
-//         border: 1px solid black;
-//         border-radius: 25px;
-//         padding: 2rem;
-//         margin: ($content-v-margin/3) 0;
-
-//         h3 {
-//             margin-bottom: ($content-v-margin/4);
-//         }
-
-//         &_icons {
-//             display: flex;
-//             justify-content: space-evenly;
-//             flex-wrap: wrap;
-//             margin: ($content-v-margin/3);
-
-//             &_icon {
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: center;
-//                 margin: 5px;
-//                 margin: ($content-v-margin/4);
-
-//                 img {
-//                     width: $skill-icon-size--lrg;
-//                     height: $skill-icon-size--lrg;
-//                     object-fit: contain;
-//                     margin-bottom: 1rem;
-
-//                     @media screen and (max-width: 500px) {
-//                         width: $skill-icon-size--sm;
-//                         height: $skill-icon-size--sm;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .edu {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     //grid-gap: 5px;
-
-//     &_school {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//         width: var(--content-width);
-//         margin: $content-v-margin auto;
-
-//         &_header {
-
-//             &--school-logo {
-//                 height: $school-logo-height;
-//             }
-//             &--pgm-name {
-//                 font-weight: bolder;
-//             }
-//             &--school-name {
-//             }
-//         }
-//         &_courses {
-//             list-style: none;
-
-//             li {
-//                 &:first-child {
-//                     font-style: italic;
-//                     border-bottom: 2px solid lightgrey;
-//                     margin: 8px 0;
-//                     padding-bottom: 3px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .contact {
-//     display: grid;
-//     grid-template-columns: min-content 3fr;
-//     grid-gap: 5px;
-//     align-items: center;
-//     width: var(--content-width);
-//     margin: $content-v-margin auto;
-
-//     a {
-//         text-decoration: none;
-//         color: black;
-//     }
-//     img {
-//         width: $contact-icon-width;
-//     }
-
-// }
-
-// // ------ title slide in animation ----------
-
-// .slide-in {
-// 	-webkit-animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-// 	        animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-// }
-
-// @-webkit-keyframes slide-in-left {
-//   0% {
-//     -webkit-transform: translateX(-1000px);
-//             transform: translateX(-1000px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-transform: translateX(0);
-//             transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
-// @keyframes slide-in-left {
-//   0% {
-//     -webkit-transform: translateX(-1000px);
-//             transform: translateX(-1000px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-transform: translateX(0);
-//             transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
+      li {
+        &:first-child {
+          font-style: italic;
+          border-bottom: 2px solid lightgrey;
+          margin: 8px 0;
+          padding-bottom: 3px;
+        }
+      }
+    }
+  }
+}
+.contact {
+  height: 30vh;
+  background-color: $apple-grey;
+  color: $apple-black;
+  &_wrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+  &_icon {
+    padding: 2rem;
+    &_link {
+      color: inherit;
+      transition: color 0.25s ease;
+      &:hover {
+        color: $color-secondary--light;
+      }
+    }
+  }
+  &_copyright {
+    font-size: 1rem;
+    font-style: italic;
+    color: inherit;
+    text-align: center;
+  }
+}
