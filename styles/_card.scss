@@ -1,5 +1,3 @@
-@import "variables";
-
 .card {
   // flex-basis: 400px;
   flex-basis: 50%;
@@ -11,13 +9,14 @@
   position: relative;
   height: 300px; // MUST have same height as _side so as to not collapse
   @media screen and (max-width: 450px) {
+    display: none;
     max-width: 100%;
     flex-grow: 1;
   }
 
   &_side {
-    overflow: hidden;
     // styles mutual to both sides
+    overflow: hidden;
     height: 300px;
     color: $apple-grey;
     transition: all 0.5s ease;
@@ -27,6 +26,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     cursor: pointer;
 
@@ -45,11 +45,10 @@
     &--front {
       background-color: white;
       position: relative;
-
-      @media screen and (max-width: 450px) {
-        // background-color: rgba(214, 147, 1, 0.904);
-        background-color: $color-tertiary;
-      }
+      // -------  media queries for under 450px are useless as card is disabled in that range
+      // @media screen and (max-width: 450px) {
+      //   background-color: $color-tertiary;
+      // }
       &_picture {
         height: 5rem;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -70,10 +69,10 @@
       &_desc {
         color: $apple-black;
         padding: 1.5rem;
-        @media screen and (max-width: 450px) {
-          padding: 1rem 2.5rem;
-          color: white;
-        }
+        // @media screen and (max-width: 450px) {
+        //   padding: 1rem 2.5rem;
+        //   color: white;
+        // }
       }
     }
     &--back {

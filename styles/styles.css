@@ -189,6 +189,7 @@
 }
 @media screen and (max-width: 450px) {
   .card {
+    display: none;
     max-width: 100%;
     flex-grow: 1;
   }
@@ -204,6 +205,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   cursor: pointer;
 }
@@ -222,11 +224,6 @@
   background-color: white;
   position: relative;
 }
-@media screen and (max-width: 450px) {
-  .card_side--front {
-    background-color: #df6925;
-  }
-}
 .card_side--front_picture {
   height: 5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -243,12 +240,6 @@
 .card_side--front_desc {
   color: #333333;
   padding: 1.5rem;
-}
-@media screen and (max-width: 450px) {
-  .card_side--front_desc {
-    padding: 1rem 2.5rem;
-    color: white;
-  }
 }
 .card_side--back {
   background-color: #333333;
@@ -297,27 +288,35 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* ------ main intro section ------ */
-main {
-  height: 100vh;
-  width: 100%;
-  background: radial-gradient(#646464, black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 3rem;
+.styled-hr {
+  border: 0;
+  height: 1px;
+  width: 70%;
+  margin: 0 auto 2rem;
 }
-@media screen and (max-width: 800px) {
-  main {
-    padding: 0 2rem;
+.styled-hr--black {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 905px) {
+  .styled-hr--black {
+    height: 0;
+    border: none;
+    margin-bottom: 3rem;
   }
 }
-main .main_title--btn {
-  border: 1.5px solid whitesmoke;
-  padding: 0.5rem;
-  color: whitesmoke;
-  border-radius: 5%;
-  background: none;
+.styled-hr--white {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
 
 h1,
@@ -371,26 +370,27 @@ h2 {
     font-size: 1.2rem;
   }
 }
-.styled-hr {
-  border: 0;
-  height: 1px;
-  width: 70%;
-  margin: 0 auto 2rem;
+/* ------ main intro section ------ */
+main {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(#646464, black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
 }
-.styled-hr--black {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-@media screen and (max-width: 905px) {
-  .styled-hr--black {
-    height: 0;
-    border: none;
-    margin-bottom: 3rem;
+@media screen and (max-width: 800px) {
+  main {
+    padding: 0 2rem;
   }
 }
-.styled-hr--white {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+main .main_title--btn {
+  border: 1.5px solid whitesmoke;
+  padding: 0.5rem;
+  color: whitesmoke;
+  border-radius: 5%;
+  background: none;
 }
 
 .main_title--name-type > .txt {
@@ -421,6 +421,7 @@ h2 {
 .about_profile {
   display: flex;
   align-items: center;
+  max-width: 1000px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -428,7 +429,6 @@ h2 {
   padding: 1rem;
 }
 .about_profile_pic {
-  flex: 0 1 200px;
   border-radius: 50%;
 }
 .about_profile_about {
@@ -443,10 +443,11 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
   line-height: 1.5rem;
+  margin-bottom: 2rem;
 }
 @media screen and (max-width: 450px) {
   .projects_project {
-    margin: 0 !important;
+    margin: 2rem 0 !important;
     width: 100% !important;
   }
 }
@@ -455,6 +456,33 @@ h2 {
 }
 .projects_project_preview_img {
   width: 100%;
+}
+.projects_project_preview_card {
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .projects_project_preview_card {
+    display: block;
+  }
+}
+.projects_project_preview_card_title {
+  color: #df6925;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.projects_project_preview_card_icon-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projects_project_preview_card_icon-list_item {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+  color: #333333;
+  border-radius: 0.25rem;
+  background-color: #ebe9e9;
 }
 .projects_project_preview_links {
   display: flex;
@@ -488,6 +516,7 @@ h2 {
 }
 .education_school_courses {
   list-style: none;
+  font-size: 1rem;
 }
 .education_school_courses li:first-child {
   font-style: italic;

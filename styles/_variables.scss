@@ -1,12 +1,14 @@
 $color-blue: #5643fa;
 $color-blue--light: #2998ff;
 $color-orange: #df6925;
+$color-lightgrey: rgb(235, 233, 233);
 
-$main-color: rgb(100, 100, 100);
-
+// colors from apple site
 $apple-black: rgb(51, 51, 51);
 $apple-grey: rgb(193, 193, 193);
 $apple-grey--dark: rgb(134, 134, 134);
+$apple-grey--light: $color-lightgrey;
+
 $color-secondary: $color-blue;
 $color-secondary--light: $color-blue--light;
 $color-tertiary: $color-orange;
