@@ -229,6 +229,77 @@
         </div>
       </section>
       <hr class="styled-hr styled-hr--black" />
+      
+      <!-- -------- news app -------------->
+      <section class="projects_project fade-in">
+        <div class="card" onclick="cardClicked(this)" id="card">
+          <div class="card_side card_side--front">
+            <div class="card_side--front_picture"></div>
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--front_title">A News App</h3>
+            <p class="card_side--front_desc">
+              A site I developed fairly quickly to showcase an app built on vanilla js that can handle
+              async calls - newsapi.org was used to fetch data.  This was my first time using gsap. Lessons learned: even for small apps, more prep time should be given for design.
+            </p>
+          </div>
+          <div class="card_side card_side--back">
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--back_title">Technical Sheet</h3>
+            <hr class="styled-hr styled-hr--white" />
+            <ul class="card_side--back_techlist">
+              <li class="card_side--back_techlist_item">
+                Javascript
+              </li>
+              <li class="card_side--back_techlist_item">
+                GSAP
+              </li>
+              <li class="card_side--back_techlist_item">
+                Node
+              </li>
+              <li class="card_side--back_techlist_item">
+                Deployed on Heroku
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="projects_project_preview">
+          <img
+            class="projects_project_preview_img"
+            src="images/news.png"
+            alt="site preview"
+          />
+
+          <div class="projects_project_preview_card">
+            <h4 class="projects_project_preview_card_title">The News App</h4>
+            <ul class="projects_project_preview_card_icon-list">
+              <li class="projects_project_preview_card_icon-list_item">Javascript</li>
+              <li class="projects_project_preview_card_icon-list_item">HTML</li>
+              <li class="projects_project_preview_card_icon-list_item">CSS</li>
+              <li class="projects_project_preview_card_icon-list_item">GSAP</li>
+              <li class="projects_project_preview_card_icon-list_item">Heroku</li>
+            </ul>
+
+          </div>
+          <div class="projects_project_preview_links">
+            <a
+              target="_blank"
+              href="https://github.com/algojedi/newsapp"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://thenews-app.herokuapp.com/"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fas fa-link fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <hr class="styled-hr styled-hr--black" />
 
       <!-- -------- weather app ----------->
       <section class="projects_project fade-in">
