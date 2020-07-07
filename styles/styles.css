@@ -472,6 +472,7 @@ main .main_title--btn {
 }
 .projects_project_preview_card_icon-list {
   list-style: none;
+  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
