@@ -80,7 +80,84 @@
       <div class="section_banner">
         <h2 class="section_banner_title">Projects</h2>
       </div>
-      <!-- -------- wordsie app ----------->
+      <!-- -------- ecommerce app ----------->
+      <section class="projects_project fade-in">
+        <div class="card" onclick="cardClicked(this)" id="card">
+          <div class="card_side card_side--front">
+            <div class="card_side--front_picture"></div>
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--front_title">An Ecommerce App</h3>
+            <p class="card_side--front_desc">
+              A portfolio is not complete without an eccommerce app.
+              This react app models a clothing store site with a checkout cart/section. 
+              The design was slightly inspired by thebay.com. Deployed on netlify.  
+
+            </p>
+          </div>
+          <div class="card_side card_side--back">
+            <i class="fas fa-sync-alt card_side_flip"></i>
+            <h3 class="card_side--back_title">Technical Sheet</h3>
+            <hr class="styled-hr styled-hr--white" />
+            <ul class="card_side--back_techlist">
+              <li class="card_side--back_techlist_item">
+                React / Router / Redux
+              </li>
+              <li class="card_side--back_techlist_item">SASS</li>
+              <li class="card_side--back_techlist_item">Node / Express</li>
+              <li class="card_side--back_techlist_item">
+                Mongoose / MongoDB 
+              </li>
+              <li class="card_side--back_techlist_item">
+                Stripe
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="projects_project_preview">
+          <img
+            class="projects_project_preview_img"
+            src="images/ecomm.png"
+            alt="site preview"
+          />
+
+          <div class="projects_project_preview_card">
+            <h4 class="projects_project_preview_card_title">The Ecommerce App</h4>
+            <ul class="projects_project_preview_card_icon-list">
+              <li class="projects_project_preview_card_icon-list_item">React</li>
+              <li class="projects_project_preview_card_icon-list_item">React Router</li>
+              <li class="projects_project_preview_card_icon-list_item">Redux</li>
+              <li class="projects_project_preview_card_icon-list_item">MongoDB</li>
+              <li class="projects_project_preview_card_icon-list_item">Node</li>
+              <li class="projects_project_preview_card_icon-list_item">Express</li>
+              <li class="projects_project_preview_card_icon-list_item">Stripe</li>
+
+            </ul>
+
+          </div>
+          <div class="projects_project_preview_links">
+            <a
+              target="_blank"
+              href="https://github.com/algojedi/ecommerce"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://stoic-swartz-9ed40b.netlify.app"
+              class="projects_project_preview_links_link"
+            >
+              <i class="fas fa-link fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <hr class="styled-hr styled-hr--black" />
+
+
+
+      <!-- -------- word app ----------->
       <section class="projects_project fade-in">
         <div class="card" onclick="cardClicked(this)" id="card">
           <div class="card_side card_side--front">
@@ -170,7 +247,7 @@
               I was not able to find something similiar online, so I created a
               math speed testing application that times and records a user's
               performance in answering a set of math questions. This was my
-              first first CRUD app. Lessons learned: importance of state
+              first first CRUD app. Lesson learned: importance of state
               management, more attention to design.
             </p>
           </div>
@@ -239,7 +316,7 @@
             <h3 class="card_side--front_title">A News App</h3>
             <p class="card_side--front_desc">
               A site I developed fairly quickly to showcase an app built on vanilla js that can handle
-              async calls - newsapi.org was used to fetch data.  This was my first time using gsap. Lessons learned: even for small apps, more prep time should be given for design.
+              async calls - newsapi.org was used to fetch data.  This was my first time using gsap. Lesson learned: even for small apps, more prep time should be given for design.
             </p>
           </div>
           <div class="card_side card_side--back">

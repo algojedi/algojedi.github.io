@@ -429,6 +429,7 @@ main .main_title--btn {
   padding: 1rem;
 }
 .about_profile_pic {
+  max-width: 200px;
   border-radius: 50%;
 }
 .about_profile_about {

@@ -172,7 +172,7 @@ main {
       padding: 1rem;
     }
     &_pic {
-      // flex: 0 1 150px;
+      max-width: 200px;
       border-radius: 50%;
     }
     &_about {
