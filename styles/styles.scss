@@ -144,11 +144,18 @@ main {
 .section {
   font-size: $section-text-size;
   color: $apple-black;
+  margin-top: 4rem;
+
   & > section {
     //does not apply to section banners
     width: 90%;
     margin: 1rem auto 2rem auto;
   }
+
+  &.about {
+    margin-top: 0px;
+  }
+
   &_banner {
     background-color: $apple-grey--light;
     width: 100%;
@@ -156,11 +163,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+
     &_title {
       color: inherit;
     }
   }
+
 }
 .about {
   &_profile {
@@ -283,7 +292,7 @@ main {
 }
 .contact {
   height: 30vh;
-  background-color: $apple-grey;
+  background-color: $apple-grey--light;
   color: $apple-black;
   &_wrapper {
     width: 90%;
